@@ -1,0 +1,15 @@
+.app-wrapper {
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "h h"
+    "n content";
+  grid-template-rows: 90px 100%;
+  grid-template-columns: 2fr 10fr;
+
+}
+.app-wrapper-content {
+  background-color: blue;
+  grid-area: content;
+}
+

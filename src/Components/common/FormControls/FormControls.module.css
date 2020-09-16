@@ -1,0 +1,10 @@
+.formControl .error{
+  border: solid red 2px
+}
+.formControl span{
+  color:red;
+}
+.formSummaryError {
+  color: red;
+  border: solid red 2px
+}

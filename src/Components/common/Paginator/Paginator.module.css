@@ -1,0 +1,7 @@
+.selectedPage {
+    color: gold;
+    font-weight: bolder;
+}
+.allPages span {
+    padding: 2px;
+}
