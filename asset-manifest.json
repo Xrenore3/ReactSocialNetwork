@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Xrenore3/ReactSocialNetwork/static/css/main.0f40e163.chunk.css",
+    "main.js": "/Xrenore3/ReactSocialNetwork/static/js/main.2987d590.chunk.js",
+    "main.js.map": "/Xrenore3/ReactSocialNetwork/static/js/main.2987d590.chunk.js.map",
+    "runtime-main.js": "/Xrenore3/ReactSocialNetwork/static/js/runtime-main.80147524.js",
+    "runtime-main.js.map": "/Xrenore3/ReactSocialNetwork/static/js/runtime-main.80147524.js.map",
+    "static/js/2.cd6c3976.chunk.js": "/Xrenore3/ReactSocialNetwork/static/js/2.cd6c3976.chunk.js",
+    "static/js/2.cd6c3976.chunk.js.map": "/Xrenore3/ReactSocialNetwork/static/js/2.cd6c3976.chunk.js.map",
+    "index.html": "/Xrenore3/ReactSocialNetwork/index.html",
+    "precache-manifest.dbdfbf414b3c6759587aafe29fe96608.js": "/Xrenore3/ReactSocialNetwork/precache-manifest.dbdfbf414b3c6759587aafe29fe96608.js",
+    "service-worker.js": "/Xrenore3/ReactSocialNetwork/service-worker.js",
+    "static/css/main.0f40e163.chunk.css.map": "/Xrenore3/ReactSocialNetwork/static/css/main.0f40e163.chunk.css.map",
+    "static/js/2.cd6c3976.chunk.js.LICENSE.txt": "/Xrenore3/ReactSocialNetwork/static/js/2.cd6c3976.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/Xrenore3/ReactSocialNetwork/static/media/logo.c06ccd00.svg",
+    "static/media/preloader.svg": "/Xrenore3/ReactSocialNetwork/static/media/preloader.72f54657.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.80147524.js",
+    "static/js/2.cd6c3976.chunk.js",
+    "static/css/main.0f40e163.chunk.css",
+    "static/js/main.2987d590.chunk.js"
+  ]
+}
