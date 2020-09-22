@@ -16,26 +16,18 @@ import {
   getCurrentPage,
   getIsFetching,
   getUserFollowingProgress,
+  getPortionNumber,
 } from "../../redux/selectors/users-selector";
 import Paginator from "../common/Paginator/Paginator";
 
 class UsersContainer extends React.Component {
   componentDidMount() {
     this.props.getUsers(this.props.currentPage, this.props.pageSize);
-    // this.props.toggleIsFetching(true);
-
-    // userAPI
-    //   .setUsersApi(this.props.currentPage, this.props.pageSize)
-    //   .then((data) => {
-    //     this.props.toggleIsFetching(false);
-    //     this.props.setUsers(data.items);
-    //     this.props.setTotalCount(data.totalCount);
-    //   });
   }
 
   render() {
-    let onPageChanged = (pageNumber) => {
-      this.props.setCurrentPage(pageNumber);
+    let onPageChanged = (pageNumber, portionNumber) => {
+      this.props.setCurrentPage(pageNumber, portionNumber);
 
       this.props.getUsers(this.props.currentPage, this.props.pageSize);
     };
@@ -45,11 +37,12 @@ class UsersContainer extends React.Component {
     return (
       <>
         <Paginator
-        currentPage={this.props.currentPage}
-        onPageChanged={onPageChanged}
-        totalItemsCount={this.props.totalUsersCount}
-        pageSize={this.props.pageSize}
-      />
+          statePortionNumber={this.props.statePortionNumber}
+          currentPage={this.props.currentPage}
+          onPageChanged={onPageChanged}
+          totalItemsCount={this.props.totalUsersCount}
+          pageSize={this.props.pageSize}
+        />
         <Users
           users={this.props.users}
           unfollow={this.props.unfollow}
@@ -68,6 +61,7 @@ let mapStateToProps = (state) => {
     pageSize: getPageSize(state),
     totalUsersCount: getTotalUsersCount(state),
     currentPage: getCurrentPage(state),
+    statePortionNumber: getPortionNumber(state),
     isFetching: getIsFetching(state),
     userFollowingProgress: getUserFollowingProgress(state),
   };

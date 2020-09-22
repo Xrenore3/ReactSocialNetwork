@@ -14,6 +14,7 @@ let initialState = {
   pageSize: 10,
   totalUsersCount: 0,
   currentPage: 1,
+  portionNumber: 1,
   isFetching: true,
   userFollowingProgress: [],
 };
@@ -23,22 +24,28 @@ const usersReducer = (state = initialState, action) => {
     case FOLLOW: {
       return {
         ...state,
-        users: updateObjectInArray(state.users, action.userId,'id', {followed: true})
-     
+        users: updateObjectInArray(state.users, action.userId, "id", {
+          followed: true,
+        }),
       };
     }
     case UNFOLLOW: {
       return {
         ...state,
-        users: updateObjectInArray(state.users, action.userId,'id', {followed: false})
-
+        users: updateObjectInArray(state.users, action.userId, "id", {
+          followed: false,
+        }),
       };
     }
     case SET_USERS: {
       return { ...state, users: action.users };
     }
     case SET_CURRENT_PAGE: {
-      return { ...state, currentPage: action.currentPage };
+      return {
+        ...state,
+        currentPage: action.currentPage,
+        portionNumber: action.portionNumber,
+      };
     }
     case SET_TOTAL_COUNT: {
       return { ...state, totalUsersCount: action.count };
@@ -72,9 +79,10 @@ export const setUsers = (users) => ({
   type: SET_USERS,
   users,
 });
-export const setCurrentPage = (currentPage) => ({
+export const setCurrentPage = (currentPage, portionNumber) => ({
   type: SET_CURRENT_PAGE,
   currentPage,
+  portionNumber,
 });
 export const setTotalCount = (count) => ({
   type: SET_TOTAL_COUNT,
@@ -85,7 +93,7 @@ export const toggleIsFetching = (isFetching) => ({
   isFetching,
 });
 
- const toggleFollowingProgress = (isFetching, userId) => ({
+const toggleFollowingProgress = (isFetching, userId) => ({
   type: TOGGLE_IS_FOLLOWING_PROGRESS,
   isFetching,
   userId,
@@ -110,10 +118,9 @@ export const follow = (userId) => async (dispatch) => {
   dispatch(toggleFollowingProgress(false, userId));
 };
 
-
 export const unfollow = (userId) => async (dispatch) => {
   dispatch(toggleFollowingProgress(true, userId));
- 
+
   let response = await userAPI.unfollowUserAPI(userId);
   if (response.data.resultCode == 0) {
     dispatch(unfollowSuccess(userId));

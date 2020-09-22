@@ -3,10 +3,10 @@ import styles from './FormControls.module.css'
 export const FormControls = ({input, meta, ...props}) => {
     
     let hasError = meta.touched && meta.error;
-    let tagForm = props.typeField;
+    let tagForm = props.typefield;
   return (
     <div className={styles.formControl}>
-      <div>
+      <div >
         {tagForm==='textarea'? <textarea {...input} {...props} className={hasError && styles.error}/>:
          <input type={tagForm} {...input} {...props} className={hasError && styles.error}/>}
        

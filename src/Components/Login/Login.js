@@ -30,7 +30,7 @@ const LoginForm = (props) => {
           placeholder="Email"
           name="email"
           component={FormControls}
-          typeField="email"
+          typefield="email"
           validate={[required, maxLenght15]}
         />
       </div>
@@ -38,7 +38,7 @@ const LoginForm = (props) => {
         <Field
           placeholder="Pasaword"
           component={FormControls}
-          typeField="password"
+          typefield="password"
           name="password"
           validate={[required, maxLenght15]}
         />
@@ -46,7 +46,7 @@ const LoginForm = (props) => {
       <div>
         <Field
           component={FormControls}
-          typeField="checkbox"
+          typefield="checkbox"
           name="rememberMe"
         />
         remember me

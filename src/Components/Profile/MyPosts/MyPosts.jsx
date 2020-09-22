@@ -43,7 +43,7 @@ const AddNewPostForm = (props) => {
     <form onSubmit={props.handleSubmit}>
       <div>
         <Field
-          typeField="textarea"
+          typefield="textarea"
           component={FormControls}
           name="newPostBody"
           placeholder="Write here"

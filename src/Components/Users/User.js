@@ -4,7 +4,7 @@ import { NavLink, Redirect } from "react-router-dom";
 
 let User = ({user,...props}) => {
   return (
-    <div>
+    <div className={classes.userBlock}>
       <span>
         <div>
           <NavLink to={`/profile/${user.id}`}>

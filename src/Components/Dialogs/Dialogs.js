@@ -36,7 +36,7 @@ const AddMessagesForm = (props) => {
       <div>
         <Field
           component={FormControls}
-          typeField='textarea'
+          typefield='textarea'
           name="newMessageBody"
           placeholder="Write here, bitch"
           validate={[maxLenght15, required]}

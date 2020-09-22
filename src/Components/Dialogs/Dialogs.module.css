@@ -2,13 +2,14 @@
   padding: 10px;
   display: grid;
   grid-template-columns: 2fr 8fr;
+  text-align: center;
 }
 .dialogsItem {
   padding: 20px;
 }
 .dialog a {
   text-decoration: none;
-  color: white;
+  color: black;
 
 }
 .messages {

@@ -5,7 +5,7 @@ import { Route, withRouter } from "react-router-dom";
 import DialogsContainer from "./Components/Dialogs/DialogsContainer";
 import UsersContainer from "./Components/Users/UsersContainer";
 import ProfileContainer from "./Components/Profile/ProfileContainer";
-import HeaderContainer from "./Components/Header/HeaderContainer";
+import Header from "./Components/Header/Header";
 import Login from "./Components/Login/Login";
 import { compose } from "redux";
 import { connect } from "react-redux";
@@ -22,7 +22,7 @@ class App extends React.Component {
     }
     return (
       <div className="app-wrapper">
-        <HeaderContainer />
+        <Header />
         <Navbar store={this.props.store} />
         <div className="app-wrapper-content">
           <Route

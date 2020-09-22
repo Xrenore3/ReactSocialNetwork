@@ -11,6 +11,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-debugger
+
 const MyPostsContainer = connect(mapStateToProps, {addPost,deletePost})(MyPosts);
 export default MyPostsContainer;

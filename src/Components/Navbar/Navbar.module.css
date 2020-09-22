@@ -1,13 +1,23 @@
 .nav{
     grid-area: n;
-    background-color: orange;
-    padding: 20px;
+    background-color: rgb(128,128,128);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.7fr;
   
   }
-.item a {
+.nav a {
   text-decoration: none;
-    color: white;
+  color: white;
 }
-.item a.activeLink {
-  color: gold
+.nav a.activeLink .item {
+  background-color: rgb(15,193,158);
+
+}
+.item {
+padding-top: 15%;
+  text-align: center;
+  height: 100%;
+  width: 270px;
+  border-top: 2px solid rgba(90, 90, 90, 0.12);
+  background-color: rgb(84,86,84);
 }

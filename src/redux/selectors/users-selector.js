@@ -24,3 +24,7 @@ export const getUserFollowingProgress = (state) => {
     return state.usersPage.userFollowingProgress
 
 }
+
+export const getPortionNumber = (state) => {
+    return state.usersPage.portionNumber
+}

@@ -2,14 +2,14 @@
   margin: 0 auto;
   display: grid;
   grid-template-areas:
-    "h h"
-    "n content";
-  grid-template-rows: 90px 100%;
+    "h  n"
+    "content content";
+  grid-template-rows: 150px 100%;
   grid-template-columns: 2fr 10fr;
 
 }
 .app-wrapper-content {
-  background-color: blue;
+  background-color: rgb(244,244,244);
   grid-area: content;
 }
 

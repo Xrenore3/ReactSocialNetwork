@@ -1,6 +1,4 @@
 import React from "react";
-import classes from "./Users.module.css";
-import Paginator from "../common/Paginator/Paginator";
 import User from "./User";
 
 let Users = (props) => {

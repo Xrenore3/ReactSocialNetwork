@@ -1,24 +1,79 @@
 import React from "react";
 import classes from "./ProfileInfo.module.css";
 import Preloader from "../../common/Preloader/Preloader";
-import ProfileStatus from "./ProfileStatus";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
+import avatart from "./../../../assets/images/avatar.jpeg";
+import { useState } from "react";
+import ProfileDataForm from "./ProfileDataForm";
 
 const ProfileInfo = (props) => {
+  let [editMode, setEditMode] = useState(false);
+
   if (!props.profile) {
     return <Preloader />;
   }
-  
+  const onMainPhotoChange = (e) => {
+    if (e.target.files.length) {
+      props.savePhoto(e.target.files[0]);
+    }
+  };
+
   return (
-    <div>
+    <div className={classes.profileBlock}>
       <div className={classes.discriptionBlock}>
-        <img src={props.profile.photos.large} />
+        <img
+          className={classes.avatar}
+          src={props.profile.photos.large || avatart}
+        />
+        <div>
+          {props.isOwner && <input onChange={onMainPhotoChange} type="file" />}
+        </div>
       </div>
       <div className={classes.aboutInfo}>
         <p className={classes.fullName}>{props.profile.fullName}</p>
-        <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
+        <ProfileStatusWithHooks
+          status={props.status}
+          updateStatus={props.updateStatus}
+        />
+      </div>
+      {!editMode ? (
+        <ProfileData {...props} activateEditMode={() => setEditMode(true)} />
+      ) : (
+        <ProfileDataForm />
+      )}
+    </div>
+  );
+};
+
+const ProfileData = (props) => {
+  return (
+    <div>
+      <button onClick={props.activateEditMode}>Edit</button>
+      <div>
+        <b>About me: </b>
+        {props.profile.aboutMe}
+      </div>
+      <div>
+        <b>Looking for a job: </b>
+        {props.profile.lookingForAJob ? "Yes" : "No"}
+      </div>
+      <div>
+        <b>My professional skills: </b>
+        {props.profile.lookingForAJobDescription}
+      </div>
+      <div className={classes.profileContactsBlock}>
+        <b>Contacts:</b>
+        {Object.keys(props.profile.contacts).map((key) => (
+          <div>
+            <div>
+              <b>{key}: </b>
+              {props.profile.contacts[key]}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
 };
+
 export default ProfileInfo;

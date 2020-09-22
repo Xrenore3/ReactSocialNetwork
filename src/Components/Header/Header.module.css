@@ -1,21 +1,9 @@
 .header {
-    grid-area: h;
-    background-color: rgb(244,244,244);
-  }
-  .loginBlock {
-    float: right;
+  grid-area: h;
+  background-color: rgb(244, 244, 244);
 
-  }
-  .loginBlock a{
-    
-    color: white
+}
 
-  }
-  .logoImg {
-    height: 70px;
-  }
-  .logoBlock {
-    padding: 10px;
-    font-weight: bold;
-  }
-  
+.logoImg {
+  height: 70px;
+}
