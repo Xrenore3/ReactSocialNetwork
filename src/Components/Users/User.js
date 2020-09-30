@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Users.module.css";
-import { NavLink, Redirect } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 let User = ({user,...props}) => {
   return (

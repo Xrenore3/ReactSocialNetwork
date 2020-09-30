@@ -11,8 +11,8 @@ const maxLenght15 = maxLengthCreator(15);
 
 const MyPosts = (props) => {
   let postsElements = [...props.posts].reverse().map((post) => (
-    <div>
-      <Post message={post.message} likesCount={post.likesCount} />
+    <div key={post.id}>
+      <Post  message={post.message} likesCount={post.likesCount} />
       <button
         onClick={() => {
           onDeletePost(post.id);

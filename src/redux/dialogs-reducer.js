@@ -1,40 +1,53 @@
-const ADD_NEW_MESSAGE = "ADD-NEW-MESSAGE";
-export const addNewMessageActionCreator = (newMessageBody) => ({
-  type: ADD_NEW_MESSAGE,
-  newMessageBody
-});
+import { updateObjectInArray } from "../utils/object-helper";
 
+const ADD_NEW_MESSAGE = "ADD-NEW-MESSAGE";
+
+export const addMessages = (newMessageBody, id) => ({
+  type: ADD_NEW_MESSAGE,
+  newMessageBody,
+  id,
+});
 
 let initialState = {
   dialogs: [
-    { id: 1, name: "Sasha" },
-    { id: 2, name: "Maria" },
-    { id: 3, name: "Ivan" },
-    { id: 4, name: "Sergiy" },
-    { id: 5, name: "Valera" },
-  ],
-
-  messages: [
-    { id: 1, message: "How are you?" },
-    { id: 2, message: "Yo" },
-    { id: 3, message: "HI" },
-    { id: 4, message: "How are you?" },
-  ],
+    {
+      id: 1,
+      name: "Sasha",
+      messages: ["How are you?"],
+    },
+    {
+      id: 2,
+      name: "Maria",
+      messages: ["I hate you", "Hi"],
+    },
+    {
+      id: 3,
+      name: "Ivan",
+      messages: ["HI"],
+    },
+    {
+      id: 4,
+      name: "Sergiy",
+      messages: ["How are you?"],
+    },
+  ]
 };
 const dialogsReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_NEW_MESSAGE: {
-      // let newMessage = {
-      //   id: 5,   
-      //   message: state.newMessageText,
-      // };
-      // let stateCopy = { ...state };
-      // stateCopy.messages = [...state.messages];
-      // stateCopy.messages.push(newMessage);
-      // stateCopy.newMessageText = " ";
       return {
+    
         ...state,
-        messages: [...state.messages, { id: 5, message: action.newMessageBody }],
+        dialogs: [
+          ...state.dialogs.map((dialog) =>
+            dialog.id === action.id
+              ? {
+                  ...dialog,
+                  messages: [...dialog.messages, action.newMessageBody],
+                }
+              : dialog
+          ),
+        ],
       };
     }
 

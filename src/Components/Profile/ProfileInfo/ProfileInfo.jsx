@@ -17,6 +17,11 @@ const ProfileInfo = (props) => {
       props.savePhoto(e.target.files[0]);
     }
   };
+  const onSubmit = (formData) => {
+    props.saveProfileChanges(formData).then(() => {
+      setEditMode(false);
+    });
+  };
 
   return (
     <div className={classes.profileBlock}>
@@ -36,10 +41,14 @@ const ProfileInfo = (props) => {
           updateStatus={props.updateStatus}
         />
       </div>
-      {!editMode ? (
+      {!editMode ? ( props.isOwner && 
         <ProfileData {...props} activateEditMode={() => setEditMode(true)} />
       ) : (
-        <ProfileDataForm />
+        <ProfileDataForm
+          profile={props.profile}
+          initialValues={props.profile}
+          onSubmit={onSubmit}
+        />
       )}
     </div>
   );
@@ -49,6 +58,10 @@ const ProfileData = (props) => {
   return (
     <div>
       <button onClick={props.activateEditMode}>Edit</button>
+      <div>
+        <b>Full name: </b>
+        {props.profile.fullName}
+      </div>
       <div>
         <b>About me: </b>
         {props.profile.aboutMe}
@@ -64,7 +77,7 @@ const ProfileData = (props) => {
       <div className={classes.profileContactsBlock}>
         <b>Contacts:</b>
         {Object.keys(props.profile.contacts).map((key) => (
-          <div>
+          <div key={key}>
             <div>
               <b>{key}: </b>
               {props.profile.contacts[key]}

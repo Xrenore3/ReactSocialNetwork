@@ -58,7 +58,7 @@ const usersReducer = (state = initialState, action) => {
         ...state,
         userFollowingProgress: action.isFetching
           ? [...state.userFollowingProgress, action.userId]
-          : state.userFollowingProgress.filter((id) => id != action.userId),
+          : state.userFollowingProgress.filter((id) => id !== action.userId),
       };
     }
 
@@ -112,7 +112,7 @@ export const follow = (userId) => async (dispatch) => {
   dispatch(toggleFollowingProgress(true, userId));
 
   let response = await userAPI.followUserAPI(userId);
-  if (response.data.resultCode == 0) {
+  if (response.data.resultCode === 0) {
     dispatch(followSuccess(userId));
   }
   dispatch(toggleFollowingProgress(false, userId));
@@ -122,7 +122,7 @@ export const unfollow = (userId) => async (dispatch) => {
   dispatch(toggleFollowingProgress(true, userId));
 
   let response = await userAPI.unfollowUserAPI(userId);
-  if (response.data.resultCode == 0) {
+  if (response.data.resultCode === 0) {
     dispatch(unfollowSuccess(userId));
   }
   dispatch(toggleFollowingProgress(false, userId));

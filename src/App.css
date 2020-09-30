@@ -11,5 +11,6 @@
 .app-wrapper-content {
   background-color: rgb(244,244,244);
   grid-area: content;
+  height: 100%;
 }
 
