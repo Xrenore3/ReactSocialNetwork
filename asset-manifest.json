@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.617bc35a.chunk.css",
-    "main.js": "/static/js/main.973a2176.chunk.js",
-    "main.js.map": "/static/js/main.973a2176.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.7c0ae09a.js",
-    "runtime-main.js.map": "/static/js/runtime-main.7c0ae09a.js.map",
-    "static/js/2.0f8bc7fb.chunk.js": "/static/js/2.0f8bc7fb.chunk.js",
-    "static/js/2.0f8bc7fb.chunk.js.map": "/static/js/2.0f8bc7fb.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.ac4284247fa093016662ab5e8b997cd9.js": "/precache-manifest.ac4284247fa093016662ab5e8b997cd9.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.617bc35a.chunk.css.map": "/static/css/main.617bc35a.chunk.css.map",
-    "static/js/2.0f8bc7fb.chunk.js.LICENSE.txt": "/static/js/2.0f8bc7fb.chunk.js.LICENSE.txt",
-    "static/media/avatar.jpeg": "/static/media/avatar.a3e84511.jpeg",
-    "static/media/logo.svg": "/static/media/logo.c06ccd00.svg",
-    "static/media/preloader.svg": "/static/media/preloader.72f54657.svg"
+    "main.css": "/ReactSocialNetwork/static/css/main.617bc35a.chunk.css",
+    "main.js": "/ReactSocialNetwork/static/js/main.11baf009.chunk.js",
+    "main.js.map": "/ReactSocialNetwork/static/js/main.11baf009.chunk.js.map",
+    "runtime-main.js": "/ReactSocialNetwork/static/js/runtime-main.f733b707.js",
+    "runtime-main.js.map": "/ReactSocialNetwork/static/js/runtime-main.f733b707.js.map",
+    "static/js/2.0f8bc7fb.chunk.js": "/ReactSocialNetwork/static/js/2.0f8bc7fb.chunk.js",
+    "static/js/2.0f8bc7fb.chunk.js.map": "/ReactSocialNetwork/static/js/2.0f8bc7fb.chunk.js.map",
+    "index.html": "/ReactSocialNetwork/index.html",
+    "precache-manifest.5443e891a293b65fabd182d21cb29628.js": "/ReactSocialNetwork/precache-manifest.5443e891a293b65fabd182d21cb29628.js",
+    "service-worker.js": "/ReactSocialNetwork/service-worker.js",
+    "static/css/main.617bc35a.chunk.css.map": "/ReactSocialNetwork/static/css/main.617bc35a.chunk.css.map",
+    "static/js/2.0f8bc7fb.chunk.js.LICENSE.txt": "/ReactSocialNetwork/static/js/2.0f8bc7fb.chunk.js.LICENSE.txt",
+    "static/media/avatar.jpeg": "/ReactSocialNetwork/static/media/avatar.a3e84511.jpeg",
+    "static/media/logo.svg": "/ReactSocialNetwork/static/media/logo.c06ccd00.svg",
+    "static/media/preloader.svg": "/ReactSocialNetwork/static/media/preloader.72f54657.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.7c0ae09a.js",
+    "static/js/runtime-main.f733b707.js",
     "static/js/2.0f8bc7fb.chunk.js",
     "static/css/main.617bc35a.chunk.css",
-    "static/js/main.973a2176.chunk.js"
+    "static/js/main.11baf009.chunk.js"
   ]
 }
