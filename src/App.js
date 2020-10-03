@@ -14,14 +14,17 @@ import Preloader from "./Components/common/Preloader/Preloader";
 
 class App extends React.Component {
   catchAllUnhandledErros = () => {
-    alert('Something goes wrong')
-  }
+    alert("Something goes wrong");
+  };
   componentDidMount() {
     this.props.initializeApp();
-    window.addEventListener('unhandledrejection', this.catchAllUnhandledErros)
+    window.addEventListener("unhandledrejection", this.catchAllUnhandledErros);
   }
   componentWillUnmount() {
-    window.removeEventListener('unhandledrejection', this.catchAllUnhandledErros)
+    window.removeEventListener(
+      "unhandledrejection",
+      this.catchAllUnhandledErros
+    );
   }
   render() {
     if (!this.props.initialized) {
@@ -32,16 +35,20 @@ class App extends React.Component {
         <Header />
         <Navbar />
         <div className="app-wrapper-content">
-          <Switch>
-            <Route
-              render={() => <ProfileContainer />}
-              path={"/profile/:userId?"}
-            />
-            <Route render={() => <DialogsContainer />} path={"/dialogs"} />
-            <Route render={() => <UsersContainer />} path={"/users"} />
-            <Route render={() => <Login />} path={"/login"} />
-            <Route render={() => <div>Not found</div>} path={"/*"} />
-          </Switch>
+          <div className='sideBar'></div>
+          <div className='mainContent'>
+            <Switch>
+              <Route
+                render={() => <ProfileContainer />}
+                path={"/profile/:userId?"}
+              />
+              <Route render={() => <DialogsContainer />} path={"/dialogs"} />
+              <Route render={() => <UsersContainer />} path={"/users"} />
+              <Route render={() => <Login />} path={"/login"} />
+              {/* <Route render={() => <div>Not found</div>} path={"/*"} /> */}
+            </Switch>
+          </div>
+          <div className='sideBar'></div>
         </div>
       </div>
     );

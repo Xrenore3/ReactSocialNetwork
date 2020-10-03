@@ -1,22 +1,83 @@
-
 .discriptionBlock {
-  padding: 5px;
+  margin: 20px 10%;
+  padding: 0 28%;
+  background-color: rgb(255, 255, 255);
 }
+.discriptionBlock .avatar {
+  max-width: 250px;
+  border-radius: 1px;
+  box-shadow: 0 0 3px 2px;
+  margin: 20px 20px 0px;
+}
+.discriptionBlock input[type="file"] {
+  display: none;
+}
+.choosePhotoButton {
+  background-color: rgb(15, 193, 158);
+  height: 100%;
+  font-size: 10px;
+  padding: 2px 7px;
+  color: aliceblue;
+  cursor: pointer;
+  border: solid 1px grey;
+  margin-left: 18px;
+  margin-top: -5px;
+}
+
 .aboutInfo {
   padding: 10px;
-
+  text-align: center;
 }
 .fullName {
   color: black;
   font-weight: bold;
+  font-size: 23px;
+  margin: 0;
 }
-.avatar {
-  max-width: 300px;
+.status {
+  color: rgb(80, 80, 80);
 }
 
-.profileBlock {
+.logoInformAboutUser {
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 10%;
   text-align: center;
+  padding-top: 10px;
+  height: 45px;
 }
-.profileContactsBlock {
 
+.logoInformAboutUser p {
+  margin: 15px;
+  display: inline;
+}
+
+.profileInfoBlock {
+  background-color: rgb(255, 255, 255);
+  margin: 0 10%;
+  padding: 0 18%;
+  color: rgb(80, 80, 80);
+}
+.profileInfoRow {
+  padding: 7px;
+}
+
+.profileInfoContactsBlock {
+  padding: 2px 15px;
+}
+.profileInfoBlock button {
+  background-color: rgb(49, 49, 49);
+  height: auto;
+  font-size: 15px;
+  padding: 3px;
+  width: 150px;
+  color: aliceblue;
+  cursor: pointer;
+}
+.buttonBlock {
+  text-align: center;
+  padding: 10px;
 }

@@ -9,8 +9,16 @@
 
 }
 .app-wrapper-content {
-  background-color: rgb(244,244,244);
+  background-color: rgb(234,234,234);
   grid-area: content;
   height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr;
+
 }
+.sideBar {
+  background-color: rgb(234,234,234);
+  /* box-shadow: 0 0 2px 2px rgb(255, 255, 255);   */
+}
+
 

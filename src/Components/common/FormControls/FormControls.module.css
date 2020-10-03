@@ -1,16 +1,40 @@
-.formControl .error{
-  border: solid red 2px
+.formControl .error {
+  display: block;
+  border: solid red 2px;
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 5px;
 }
-.formControl span{
-  color:red;
+.formControl span {
+  color: red;
 }
 .formSummaryError {
   color: red;
-  border: solid red 2px
+  padding: 5px;
 }
-.formControl  {
-  color: #606468;
-
+.formControl {
+  color: rgb(100, 100, 100);
+  padding-left: 10px;
   margin: 0;
+}
+.formControlInput {
+  position: relative;
+
+  width: 86%;
+  font-size: 16px;
+  height: auto;
+  padding: 5px;
+}
+.formControlInput[type="checkbox"] {
+  width: auto;
+}
+.formControl textarea {
+  color: rgb(100, 100, 100);
+  width: 87%;
+  height: auto;
+  font-size: 16px;
+  padding: 5px;
+
 
 }

@@ -4,7 +4,8 @@ import Preloader from "../../common/Preloader/Preloader";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import avatart from "./../../../assets/images/avatar.jpeg";
 import { useState } from "react";
-import ProfileDataForm from "./ProfileDataForm";
+import ProfileDataForm from "./ProfileDataForm/ProfileDataForm";
+import logoInformAboutUser from "./../../../assets/images/icon_information__about_user.png";
 
 const ProfileInfo = (props) => {
   let [editMode, setEditMode] = useState(false);
@@ -24,25 +25,38 @@ const ProfileInfo = (props) => {
   };
 
   return (
-    <div className={classes.profileBlock}>
+    <div>
       <div className={classes.discriptionBlock}>
         <img
           className={classes.avatar}
           src={props.profile.photos.large || avatart}
         />
         <div>
-          {props.isOwner && <input onChange={onMainPhotoChange} type="file" />}
+          {props.isOwner && (
+            <label className={classes.choosePhotoButton}>
+              Choose a photo
+              <input onChange={onMainPhotoChange} type="file" />
+            </label>
+          )}
+        </div>
+
+        <div className={classes.aboutInfo}>
+          <p className={classes.fullName}>{props.profile.fullName}</p>
+          <ProfileStatusWithHooks
+            status={props.status}
+            updateStatus={props.updateStatus}
+            isOwner={props.isOwner}
+          />
         </div>
       </div>
-      <div className={classes.aboutInfo}>
-        <p className={classes.fullName}>{props.profile.fullName}</p>
-        <ProfileStatusWithHooks
-          status={props.status}
-          updateStatus={props.updateStatus}
-        />
+      <div className={classes.logoInformAboutUser}>
+        <img src={logoInformAboutUser} />
+        <p>User information</p>
       </div>
-      {!editMode ? ( props.isOwner && 
-        <ProfileData {...props} activateEditMode={() => setEditMode(true)} />
+      {!editMode ? (
+        props.isOwner && (
+          <ProfileData {...props} activateEditMode={() => setEditMode(true)} />
+        )
       ) : (
         <ProfileDataForm
           profile={props.profile}
@@ -56,34 +70,30 @@ const ProfileInfo = (props) => {
 
 const ProfileData = (props) => {
   return (
-    <div>
-      <button onClick={props.activateEditMode}>Edit</button>
-      <div>
-        <b>Full name: </b>
-        {props.profile.fullName}
-      </div>
-      <div>
+    <div className={classes.profileInfoBlock}>
+      <div className={classes.profileInfoRow}>
         <b>About me: </b>
         {props.profile.aboutMe}
       </div>
-      <div>
+      <div className={classes.profileInfoRow}>
         <b>Looking for a job: </b>
         {props.profile.lookingForAJob ? "Yes" : "No"}
       </div>
-      <div>
+      <div className={classes.profileInfoRow}>
         <b>My professional skills: </b>
         {props.profile.lookingForAJobDescription}
       </div>
-      <div className={classes.profileContactsBlock}>
+      <div className={classes.profileInfoRow}>
         <b>Contacts:</b>
         {Object.keys(props.profile.contacts).map((key) => (
-          <div key={key}>
-            <div>
-              <b>{key}: </b>
-              {props.profile.contacts[key]}
-            </div>
+          <div key={key} className={classes.profileInfoContactsBlock}>
+            <b>{key}: </b>
+            {props.profile.contacts[key]}
           </div>
         ))}
+      </div>
+      <div className={classes.buttonBlock}>
+        <button onClick={props.activateEditMode}>Edit</button>
       </div>
     </div>
   );

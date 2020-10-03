@@ -1,0 +1,38 @@
+.wrapperLogin {	
+	margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.formSignin {
+  max-width: 240px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
+
+
+  }
+  .formSigninHeading,
+	.checkbox {
+    margin-bottom: 30px;
+    padding-left: 9px;
+  }
+  .btnLoginBlock {
+    padding-left: 9px;
+  }
+
+  .btnLogin {
+    background-color: rgb(49, 49, 49);
+    display: block;
+    height: auto;
+    position: relative;
+	  font-size: 16px;
+	  height: auto;
+    padding: 7px;
+    width: 92%;
+    color: aliceblue;
+    cursor: pointer;
+
+
+  }
+  

@@ -1,20 +1,18 @@
 import React from "react";
-import classes from "./ProfileInfo.module.css";
-import stylesFromControl from './../../common/FormControls/FormControls.module.css'
+import stylesFromControl from "./../../../common/FormControls/FormControls.module.css";
 import { Field, reduxForm } from "redux-form";
-import { FormControls } from "../../common/FormControls/FormControls";
+import { FormControls } from "../../../common/FormControls/FormControls";
 import {
   maxLengthCreator,
   required,
-} from "../../../utils/validators/validators";
+} from "../../../../utils/validators/validators";
+import classes from "./ProfileDataForm.module.css";
 
 const maxLenght30 = maxLengthCreator(30);
 
 const ProfileDataForm = (props) => {
-  debugger
   return (
-    <form onSubmit={props.handleSubmit}>
-      <button>save</button>
+    <form onSubmit={props.handleSubmit} className={classes.profileInfoBlock}>
       <div>
         <b>Full name: </b>
         <Field
@@ -57,17 +55,21 @@ const ProfileDataForm = (props) => {
             <div>
               <b>{key}: </b>
               <Field
-                name={'contacts.'+key}
+                name={"contacts." + key}
                 component={FormControls}
                 typefield="text"
-
               />
             </div>
           </div>
         ))}
       </div>
-      {props.error && <div className={stylesFromControl.formSummaryError}>{props.error}</div>}
+      <div className={classes.buttonBlock}>
+        <button>save</button>
+      </div>
 
+      {props.error && (
+        <div className={stylesFromControl.formSummaryError}>{props.error}</div>
+      )}
     </form>
   );
 };

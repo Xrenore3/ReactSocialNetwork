@@ -8,7 +8,7 @@ import {
 } from "../../../utils/validators/validators";
 import { FormControls } from "../../common/FormControls/FormControls";
 
-const maxLenght15 = maxLengthCreator(50);
+const maxLenght15 = maxLengthCreator(100);
 
 const Message = (props) => {
   debugger;
@@ -42,7 +42,7 @@ const AddMessagesForm = (props) => {
           typefield="textarea"
           name="newMessageBody"
           placeholder="Write here, bitch"
-          validate={[maxLenght15, required]}
+          validate={[maxLenght15]}
         ></Field>
       </div>
       <div>

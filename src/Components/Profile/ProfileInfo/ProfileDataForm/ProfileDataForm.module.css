@@ -1,0 +1,25 @@
+.profileInfoBlock {
+  background-color: rgb(255, 255, 255);
+  margin: 0 10%;
+  padding: 0 10%;
+  color: rgb(100, 100, 100);
+
+  
+}
+
+.profileInfoBlock button {
+  background-color: rgb(49, 49, 49);
+  height: auto;
+  font-size: 15px;
+  padding: 3px;
+  width: 150px;
+  color: aliceblue;
+  cursor: pointer;
+
+
+
+}
+.buttonBlock {
+  text-align: center;
+  padding: 10px;
+}

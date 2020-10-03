@@ -2,7 +2,7 @@
     grid-area: n;
     background-color: rgb(128,128,128);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 0.7fr;
+    grid-template-columns: 1fr 1fr 1fr 142px;
   
   }
 .nav a {
