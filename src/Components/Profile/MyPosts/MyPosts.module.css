@@ -1,7 +1,31 @@
 
 .postsBlock {
-  padding: 10px;
-  text-align: center;
-  display: block;
-  margin: 15px 20% ;
+  margin: 20px 10%;
+  background-color: white ;
+  padding:  0 18%;
+
 }
+
+.postsBlock h3 {
+  text-align: center;
+  padding-top: 10px;
+}
+.postsBlock .btnAddPost{
+  background-color: rgb(49, 49, 49);
+  height: auto;
+  font-size: 15px;
+  padding: 3px;
+  width: 150px;
+  color: aliceblue;
+  cursor: pointer;
+}
+.btnAddPostBlock {
+  text-align: center;
+}
+.addPostBlock {
+  margin-top: 50px;
+  background-color:rgb(234,234,234)
+  }
+  .formBlock {
+   text-align: center;
+ }

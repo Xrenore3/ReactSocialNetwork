@@ -12,7 +12,7 @@ const maxLenght15 = maxLengthCreator(15);
 const MyPosts = (props) => {
   let postsElements = [...props.posts].reverse().map((post) => (
     <div key={post.id}>
-      <Post  message={post.message} likesCount={post.likesCount} />
+      <Post message={post.message} likesCount={post.likesCount} />
       <button
         onClick={() => {
           onDeletePost(post.id);
@@ -30,8 +30,11 @@ const MyPosts = (props) => {
   };
   return (
     <div className={classes.postsBlock}>
-      <h3> My post</h3>
-      <AddNewPostReduxForm onSubmit={onAddPosts} />
+      <div></div>
+      <div className={classes.addPostBlock}>
+        <h3> My post</h3>
+        <AddNewPostReduxForm onSubmit={onAddPosts} />
+      </div>
       <div>New post</div>
       <div className={classes.posts}>{postsElements}</div>
     </div>
@@ -40,7 +43,7 @@ const MyPosts = (props) => {
 
 const AddNewPostForm = (props) => {
   return (
-    <form onSubmit={props.handleSubmit}>
+    <form className={classes.formBlock} onSubmit={props.handleSubmit}>
       <div>
         <Field
           typefield="textarea"
@@ -50,8 +53,8 @@ const AddNewPostForm = (props) => {
           validate={[maxLenght15, required]}
         ></Field>
       </div>
-      <div>
-        <button>Add posts</button>
+      <div className={classes.btnAddPostBlock}>
+        <button className={classes.btnAddPost}>Add posts</button>
       </div>
     </form>
   );
