@@ -23,7 +23,7 @@ const ProfileInfo = (props) => {
       setEditMode(false);
     });
   };
-
+debugger
   return (
     <div>
       <div className={classes.discriptionBlock}>

@@ -7,19 +7,29 @@ import {
   required,
 } from "../../../utils/validators/validators";
 import { FormControls } from "../../common/FormControls/FormControls";
-const maxLenght15 = maxLengthCreator(15);
+import deleteIcon from "./../../../assets/images/icon_delete.svg";
+const maxLenght15 = maxLengthCreator(150);
 
 const MyPosts = (props) => {
+  debugger;
   let postsElements = [...props.posts].reverse().map((post) => (
     <div key={post.id}>
-      <Post message={post.message} likesCount={post.likesCount} />
-      <button
-        onClick={() => {
-          onDeletePost(post.id);
-        }}
-      >
-        delete
-      </button>
+      <div className={classes.btnDeletePostBlock}>
+        <button
+          onClick={() => {
+            onDeletePost(post.id);
+          }}
+          className={classes.btnDeletePost}
+          type="submit"
+        >
+          <img src={deleteIcon} />
+        </button>
+      </div>
+      <Post
+        message={post.message}
+        likesCount={post.likesCount}
+        profile={props.profile}
+      />
     </div>
   ));
   let onDeletePost = (postId) => {
@@ -30,12 +40,10 @@ const MyPosts = (props) => {
   };
   return (
     <div className={classes.postsBlock}>
-      <div></div>
       <div className={classes.addPostBlock}>
-        <h3> My post</h3>
+        <h3> New post</h3>
         <AddNewPostReduxForm onSubmit={onAddPosts} />
       </div>
-      <div>New post</div>
       <div className={classes.posts}>{postsElements}</div>
     </div>
   );
@@ -50,7 +58,7 @@ const AddNewPostForm = (props) => {
           component={FormControls}
           name="newPostBody"
           placeholder="Write here"
-          validate={[maxLenght15, required]}
+          validate={[maxLenght15]}
         ></Field>
       </div>
       <div className={classes.btnAddPostBlock}>

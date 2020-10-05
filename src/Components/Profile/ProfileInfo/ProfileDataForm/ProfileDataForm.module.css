@@ -1,5 +1,7 @@
 .profileInfoBlock {
   background-color: rgb(255, 255, 255);
+  border: solid 2px rgb(225, 225, 225) ;
+
   margin: 0 10%;
   padding: 0 10%;
   color: rgb(100, 100, 100);

@@ -3,6 +3,7 @@ import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 const Profile = (props) => {
+  
   return (
     <div>
       <ProfileInfo
@@ -13,7 +14,7 @@ const Profile = (props) => {
         savePhoto={props.savePhoto}
         saveProfileChanges={props.saveProfileChanges}
       />
-     {props.isOwner && <MyPostsContainer />}
+     {props.isOwner && <MyPostsContainer/>}
     </div>
   );
 };

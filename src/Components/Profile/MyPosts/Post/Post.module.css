@@ -1,10 +1,38 @@
+.item {
+  background-color: rgb(15, 193, 158);
+  border: solid 2px rgb(13, 158, 129) ;
 
+}
 
-  .item {
-    color: greenyellow;
+.item .avatar {
+  border-radius: 50%;
+  border: solid 2px grey;
+  width: 60px;
+}
 
-  }
+.avatarAndFullNameBlock {
+  font-weight: bold;
+  color: rgb(56, 56, 56);
 
-  .item img {
-    width: 50px;
-  }
+  padding: 10px;
+  display: table;
+}
+.avatarAndFullNameBlock span {
+  display: table-cell;
+
+  vertical-align: middle;
+}
+.postMessage {
+  padding: 10px;
+  text-align: center;
+  font-style: italic;
+  color: rgb(38, 38, 38);
+
+}
+.iconLike {
+  width: 16px;
+}
+.likeBlock{
+  color:rgb(203,50,50);
+  text-align: center;
+}
