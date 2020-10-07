@@ -1,8 +1,24 @@
-.loginBlock a {
-  color: black;
-}
-.logoBlock {
-  padding: 10px;
+.loginBlock {
+  background-color: red;
   font-weight: bold;
+  padding: 10%;
+  text-align: center;
+  margin: 0 42% 0 -42%;
+  background-color: rgb(179, 179, 179);
+  color: rgb(68, 68, 68);
 }
 
+.avatar {
+  border-radius: 50%;
+  border: solid 1px rgb(67, 67, 67);
+  width: 60px;
+}
+.logoutButton {
+  background-color: rgb(15, 193, 158);
+  width: 60px;
+  font-size: 12px;
+  padding: 2px 7px;
+  color: rgb(230, 230, 230);
+  cursor: pointer;
+  border: solid 1px rgb(11, 151, 123);
+}

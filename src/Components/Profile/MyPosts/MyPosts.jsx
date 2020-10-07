@@ -4,14 +4,12 @@ import Post from "./Post/Post";
 import { Field, reduxForm } from "redux-form";
 import {
   maxLengthCreator,
-  required,
 } from "../../../utils/validators/validators";
 import { FormControls } from "../../common/FormControls/FormControls";
 import deleteIcon from "./../../../assets/images/icon_delete.svg";
 const maxLenght15 = maxLengthCreator(150);
 
 const MyPosts = (props) => {
-  debugger;
   let postsElements = [...props.posts].reverse().map((post) => (
     <div key={post.id}>
       <div className={classes.btnDeletePostBlock}>
@@ -22,7 +20,7 @@ const MyPosts = (props) => {
           className={classes.btnDeletePost}
           type="submit"
         >
-          <img src={deleteIcon} />
+          <img src={deleteIcon}  alt='delete icon'/>
         </button>
       </div>
       <Post

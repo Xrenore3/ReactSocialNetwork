@@ -7,7 +7,7 @@ let Paginator = ({
   currentPage,
   onPageChanged,
   portionSize = 5,
-  statePortionNumber
+  statePortionNumber,
 }) => {
   let pagesCount = Math.ceil(totalItemsCount / pageSize);
   let pages = [];
@@ -18,11 +18,19 @@ let Paginator = ({
   let [portionNumber, setPortionNumber] = useState(statePortionNumber);
   let leftPortionPageNumber = (portionNumber - 1) * portionSize + 1;
   let rightPortionPageNumber = portionNumber * portionSize;
-  
 
   return (
     <div className={classes.allPages}>
-      {portionNumber > 1 && <button>PREV</button>}
+      {portionNumber > 1 && (
+        <button
+          className={classes.btnPrevNext}
+          onClick={() => {
+            setPortionNumber(portionNumber - 1);
+          }}
+        >
+           {'<'}
+        </button>
+      )}
       {pages
         .filter(
           (page) =>
@@ -32,7 +40,7 @@ let Paginator = ({
           return (
             <span
               className={currentPage === page && classes.selectedPage}
-              onClick={() => onPageChanged(page,portionNumber)}
+              onClick={() => onPageChanged(page, portionNumber)}
             >
               {page}
             </span>
@@ -40,11 +48,12 @@ let Paginator = ({
         })}
       {protionCount > portionNumber && (
         <button
+          className={classes.btnPrevNext}
           onClick={() => {
             setPortionNumber(portionNumber + 1);
           }}
         >
-          Next
+          {'>'}
         </button>
       )}
     </div>

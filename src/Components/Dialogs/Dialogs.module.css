@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 2fr 8fr;
   text-align: center;
+
 }
 .dialogsItem {
   padding: 20px;
@@ -12,12 +13,12 @@
   color: black;
 
 }
-.messages {
-
+.messagesItem {
+  border: solid 2px rgb(225, 225, 225) ;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 70px ;
 }
-.message {
 
-}
 .active{
   color: goldenrod;
 }

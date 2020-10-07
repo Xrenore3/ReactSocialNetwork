@@ -1,5 +1,4 @@
-import React from "react";
-import { addMessages, addNewMessageActionCreator } from "../../redux/dialogs-reducer";
+import { addMessages } from "../../redux/dialogs-reducer";
 import Dialogs from "./Dialogs";
 import { connect } from "react-redux";
 import { withAuthRedirect } from "../../hoc/withAuthRedirect";

@@ -1,7 +1,22 @@
 .selectedPage {
-    color: gold;
+    color:  rgb(87, 196, 109);
     font-weight: bolder;
 }
+
+.btnPrevNext {
+    color:  rgb(87, 196, 109);
+    background-color: rgb(49, 49, 49);
+    height: auto;
+    font-size: 15px;
+    padding: 3px;
+    width: 20px;
+    color: aliceblue;
+    cursor: pointer;
+
+}
 .allPages span {
-    padding: 2px;
+    display: inline-block;
+    height: 10px;
+    width: 20px;
+    padding: 5px;
 }

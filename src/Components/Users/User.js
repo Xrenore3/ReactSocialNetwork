@@ -8,7 +8,7 @@ let User = ({user,...props}) => {
       <span>
         <div>
           <NavLink to={`/profile/${user.id}`}>
-            <img
+            <img alt='user avatar'
               src={
                 user.photos.small != null
                   ? user.photos.small
@@ -20,7 +20,7 @@ let User = ({user,...props}) => {
         <div>
           {user.followed ? (
             <button
-              disabled={props.userFollowingProgress.some((id) => id == user.id)}
+              disabled={props.userFollowingProgress.some((id) => id === user.id)}
               onClick={() => {
                 props.unfollow(user.id);
               }}
@@ -29,7 +29,7 @@ let User = ({user,...props}) => {
             </button>
           ) : (
             <button
-              disabled={props.userFollowingProgress.some((id) => id == user.id)}
+              disabled={props.userFollowingProgress.some((id) => id === user.id)}
               onClick={() => {
                 props.follow(user.id);
               }}

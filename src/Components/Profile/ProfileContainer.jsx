@@ -34,7 +34,6 @@ class ProfileContainer extends React.Component {
     }
   }
   render() {
-    debugger
     // if (this.props.isLogin) {
     //   return <Redirect to={"/login"} />;
     // }

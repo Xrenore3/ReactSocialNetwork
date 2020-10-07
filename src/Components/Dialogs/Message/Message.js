@@ -1,29 +1,25 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import classes from "./../Dialogs.module.css";
 import { Field, reduxForm } from "redux-form";
-import {
-  maxLengthCreator,
-  required,
-} from "../../../utils/validators/validators";
+import { maxLengthCreator } from "../../../utils/validators/validators";
 import { FormControls } from "../../common/FormControls/FormControls";
+import classes from "./Message.module.css";
 
 const maxLenght15 = maxLengthCreator(100);
 
 const Message = (props) => {
-  debugger;
   const showAllMessages = props.messages.map((message) => (
     <div className={classes.message}>{message}</div>
   ));
 
   let onSubmit = (formData) => {
     debugger;
-    props.addMessages(formData.newMessageBody,props.id);
+    props.addMessages(formData.newMessageBody, props.id);
   };
   return (
     <Route
       render={() => (
-        <div>
+        <div classes={classes.messagesBlock}>
           {showAllMessages}
           <AddMessagesReduxForm onSubmit={onSubmit} />
         </div>
@@ -35,8 +31,8 @@ const Message = (props) => {
 
 const AddMessagesForm = (props) => {
   return (
-    <form onSubmit={props.handleSubmit} >
-      <div>
+    <form onSubmit={props.handleSubmit} className={classes.AddMessagesForm}>
+      <div className={classes.addMessageBlock}>
         <Field
           component={FormControls}
           typefield="textarea"
@@ -44,8 +40,6 @@ const AddMessagesForm = (props) => {
           placeholder="Write here, bitch"
           validate={[maxLenght15]}
         ></Field>
-      </div>
-      <div>
         <button>Send message</button>
       </div>
     </form>

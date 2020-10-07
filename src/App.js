@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import { Route, Switch, withRouter } from "react-router-dom";
@@ -13,19 +13,19 @@ import { initializeApp } from "./redux/app-reducer";
 import Preloader from "./Components/common/Preloader/Preloader";
 
 class App extends React.Component {
-  catchAllUnhandledErros = () => {
-    alert("Something goes wrong");
-  };
+  // catchAllUnhandledErros = () => {
+  //   alert("Something goes wrong");
+  // };
   componentDidMount() {
     this.props.initializeApp();
-    window.addEventListener("unhandledrejection", this.catchAllUnhandledErros);
+    // window.addEventListener("unhandledrejection", this.catchAllUnhandledErros);
   }
-  componentWillUnmount() {
-    window.removeEventListener(
-      "unhandledrejection",
-      this.catchAllUnhandledErros
-    );
-  }
+  // componentWillUnmount() {
+  //   window.removeEventListener(
+  //     "unhandledrejection",
+  //     this.catchAllUnhandledErros
+  //   );
+  // }
   render() {
     if (!this.props.initialized) {
       return <Preloader />;

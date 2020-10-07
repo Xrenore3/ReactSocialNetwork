@@ -1,0 +1,28 @@
+.message {
+  padding: 10px;
+  width: fit-content;
+  background-color: rgb(15,193,158);
+  border: solid 2px rgb(13, 158, 129);
+  border-radius: 10px 10px 0 ;
+  color: rgb(38, 38, 38);
+  margin: 5px;
+}
+.AddMessagesForm {
+  margin: 20px 8px;
+
+}
+.addMessageBlock {
+padding: 15px 50px;
+background-color: rgb(235, 235, 235);
+border: solid 2px rgb(220, 220, 220);
+}
+
+.addMessageBlock button {
+  background-color: rgb(49, 49, 49);
+  height: auto;
+  font-size: 15px;
+  padding: 3px 10px;
+  width: auto;
+  color: aliceblue;
+  cursor: pointer;
+}

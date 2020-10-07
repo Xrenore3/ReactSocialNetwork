@@ -1,4 +1,3 @@
-import { updateObjectInArray } from "../utils/object-helper";
 
 const ADD_NEW_MESSAGE = "ADD-NEW-MESSAGE";
 

@@ -2,11 +2,11 @@ import React from "react";
 import classes from "./Post.module.css";
 import iconLike from "./../../../../assets/images/icon_like.png";
 const Post = (props) => {
-  debugger;
   return (
     <div className={classes.item}>
       <div className={classes.avatarAndFullNameBlock}>
         <img
+        alt='avatar'
           className={classes.avatar}
           src={
             props.profile
@@ -21,7 +21,7 @@ const Post = (props) => {
       </div>
 
       <div className={classes.likeBlock}>
-        <img className={classes.iconLike} src={iconLike} />
+        <img className={classes.iconLike} src={iconLike} alt='icon Like' />
         <span> {props.likesCount}</span>
       </div>
     </div>

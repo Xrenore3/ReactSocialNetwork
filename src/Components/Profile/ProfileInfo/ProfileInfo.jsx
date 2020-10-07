@@ -23,11 +23,11 @@ const ProfileInfo = (props) => {
       setEditMode(false);
     });
   };
-debugger
   return (
     <div>
       <div className={classes.discriptionBlock}>
         <img
+          alt="avatar"
           className={classes.avatar}
           src={props.profile.photos.large || avatart}
         />
@@ -50,13 +50,11 @@ debugger
         </div>
       </div>
       <div className={classes.logoInformAboutUser}>
-        <img src={logoInformAboutUser} />
+        <img src={logoInformAboutUser} alt="logo inform about user" />
         <p>User information</p>
       </div>
       {!editMode ? (
-        props.isOwner && (
-          <ProfileData {...props} activateEditMode={() => setEditMode(true)} />
-        )
+        <ProfileData {...props} activateEditMode={() => setEditMode(true)} />
       ) : (
         <ProfileDataForm
           profile={props.profile}
@@ -93,7 +91,9 @@ const ProfileData = (props) => {
         ))}
       </div>
       <div className={classes.buttonBlock}>
-        <button onClick={props.activateEditMode}>Edit</button>
+        {props.isOwner && (
+          <button onClick={props.activateEditMode}>Edit</button>
+        )}
       </div>
     </div>
   );
