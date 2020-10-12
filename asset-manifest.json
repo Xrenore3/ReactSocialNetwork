@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/ReactSocialNetwork/static/css/main.efc95fca.chunk.css",
-    "main.js": "/ReactSocialNetwork/static/js/main.07fe5ae5.chunk.js",
-    "main.js.map": "/ReactSocialNetwork/static/js/main.07fe5ae5.chunk.js.map",
+    "main.css": "/ReactSocialNetwork/static/css/main.228651f2.chunk.css",
+    "main.js": "/ReactSocialNetwork/static/js/main.f840408c.chunk.js",
+    "main.js.map": "/ReactSocialNetwork/static/js/main.f840408c.chunk.js.map",
     "runtime-main.js": "/ReactSocialNetwork/static/js/runtime-main.f733b707.js",
     "runtime-main.js.map": "/ReactSocialNetwork/static/js/runtime-main.f733b707.js.map",
-    "static/js/2.96656c6b.chunk.js": "/ReactSocialNetwork/static/js/2.96656c6b.chunk.js",
-    "static/js/2.96656c6b.chunk.js.map": "/ReactSocialNetwork/static/js/2.96656c6b.chunk.js.map",
+    "static/js/2.89b57980.chunk.js": "/ReactSocialNetwork/static/js/2.89b57980.chunk.js",
+    "static/js/2.89b57980.chunk.js.map": "/ReactSocialNetwork/static/js/2.89b57980.chunk.js.map",
     "index.html": "/ReactSocialNetwork/index.html",
-    "precache-manifest.ca367c3de28bd9e49c0ee35a6851f55a.js": "/ReactSocialNetwork/precache-manifest.ca367c3de28bd9e49c0ee35a6851f55a.js",
+    "precache-manifest.799f7976ee2c64d18b1231e018e913e0.js": "/ReactSocialNetwork/precache-manifest.799f7976ee2c64d18b1231e018e913e0.js",
     "service-worker.js": "/ReactSocialNetwork/service-worker.js",
-    "static/css/main.efc95fca.chunk.css.map": "/ReactSocialNetwork/static/css/main.efc95fca.chunk.css.map",
-    "static/js/2.96656c6b.chunk.js.LICENSE.txt": "/ReactSocialNetwork/static/js/2.96656c6b.chunk.js.LICENSE.txt",
+    "static/css/main.228651f2.chunk.css.map": "/ReactSocialNetwork/static/css/main.228651f2.chunk.css.map",
+    "static/js/2.89b57980.chunk.js.LICENSE.txt": "/ReactSocialNetwork/static/js/2.89b57980.chunk.js.LICENSE.txt",
     "static/media/avatar.jpeg": "/ReactSocialNetwork/static/media/avatar.a3e84511.jpeg",
     "static/media/icon_delete.svg": "/ReactSocialNetwork/static/media/icon_delete.fab13095.svg",
     "static/media/logo.svg": "/ReactSocialNetwork/static/media/logo.85a8e162.svg",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f733b707.js",
-    "static/js/2.96656c6b.chunk.js",
-    "static/css/main.efc95fca.chunk.css",
-    "static/js/main.07fe5ae5.chunk.js"
+    "static/js/2.89b57980.chunk.js",
+    "static/css/main.228651f2.chunk.css",
+    "static/js/main.f840408c.chunk.js"
   ]
 }
