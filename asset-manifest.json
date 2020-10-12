@@ -1,26 +1,25 @@
 {
   "files": {
     "main.css": "/ReactSocialNetwork/static/css/main.d763e7d5.chunk.css",
-    "main.js": "/ReactSocialNetwork/static/js/main.821fd473.chunk.js",
-    "main.js.map": "/ReactSocialNetwork/static/js/main.821fd473.chunk.js.map",
+    "main.js": "/ReactSocialNetwork/static/js/main.f354882d.chunk.js",
+    "main.js.map": "/ReactSocialNetwork/static/js/main.f354882d.chunk.js.map",
     "runtime-main.js": "/ReactSocialNetwork/static/js/runtime-main.f733b707.js",
     "runtime-main.js.map": "/ReactSocialNetwork/static/js/runtime-main.f733b707.js.map",
-    "static/js/2.d26ec6e0.chunk.js": "/ReactSocialNetwork/static/js/2.d26ec6e0.chunk.js",
-    "static/js/2.d26ec6e0.chunk.js.map": "/ReactSocialNetwork/static/js/2.d26ec6e0.chunk.js.map",
+    "static/js/2.ac5770ad.chunk.js": "/ReactSocialNetwork/static/js/2.ac5770ad.chunk.js",
+    "static/js/2.ac5770ad.chunk.js.map": "/ReactSocialNetwork/static/js/2.ac5770ad.chunk.js.map",
     "index.html": "/ReactSocialNetwork/index.html",
-    "precache-manifest.af5a16ec645f0e7d5fe89dab65aee0a8.js": "/ReactSocialNetwork/precache-manifest.af5a16ec645f0e7d5fe89dab65aee0a8.js",
+    "precache-manifest.ac5567a4b2f1083146bcd02713a2f2d2.js": "/ReactSocialNetwork/precache-manifest.ac5567a4b2f1083146bcd02713a2f2d2.js",
     "service-worker.js": "/ReactSocialNetwork/service-worker.js",
     "static/css/main.d763e7d5.chunk.css.map": "/ReactSocialNetwork/static/css/main.d763e7d5.chunk.css.map",
-    "static/js/2.d26ec6e0.chunk.js.LICENSE.txt": "/ReactSocialNetwork/static/js/2.d26ec6e0.chunk.js.LICENSE.txt",
-    "static/media/avatar.jpeg": "/ReactSocialNetwork/static/media/avatar.a3e84511.jpeg",
+    "static/js/2.ac5770ad.chunk.js.LICENSE.txt": "/ReactSocialNetwork/static/js/2.ac5770ad.chunk.js.LICENSE.txt",
     "static/media/icon_delete.svg": "/ReactSocialNetwork/static/media/icon_delete.fab13095.svg",
     "static/media/logo.svg": "/ReactSocialNetwork/static/media/logo.85a8e162.svg",
     "static/media/preloader.svg": "/ReactSocialNetwork/static/media/preloader.72f54657.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.f733b707.js",
-    "static/js/2.d26ec6e0.chunk.js",
+    "static/js/2.ac5770ad.chunk.js",
     "static/css/main.d763e7d5.chunk.css",
-    "static/js/main.821fd473.chunk.js"
+    "static/js/main.f354882d.chunk.js"
   ]
 }
