@@ -11,6 +11,7 @@ import { compose } from "redux";
 import { connect } from "react-redux";
 import { initializeApp } from "./redux/app-reducer";
 import Preloader from "./Components/common/Preloader/Preloader";
+import { getAvatarLogo } from "./redux/auth-reducer";
 
 class App extends React.Component {
   // catchAllUnhandledErros = () => {
@@ -35,8 +36,8 @@ class App extends React.Component {
         <Header />
         <Navbar />
         <div className="app-wrapper-content">
-          <div className='sideBar'></div>
-          <div className='mainContent'>
+          <div className="sideBar"></div>
+          <div className="mainContent">
             <Switch>
               <Route
                 render={() => <ProfileContainer />}
@@ -48,7 +49,7 @@ class App extends React.Component {
               {/* <Route render={() => <div>Not found</div>} path={"/*"} /> */}
             </Switch>
           </div>
-          <div className='sideBar'></div>
+          <div className="sideBar"></div>
         </div>
       </div>
     );
@@ -60,5 +61,5 @@ const mapStateToProps = (state) => ({
 });
 export default compose(
   withRouter,
-  connect(mapStateToProps, { initializeApp })
+  connect(mapStateToProps, { initializeApp, getAvatarLogo })
 )(App);

@@ -12,7 +12,7 @@ let initialState = {
     {
       id: 1,
       name: "Sasha",
-      messages: ["How are you?"],
+      messages: ["How are you?",`Your reducer function's returned value is assigned to the accumulator, whose value is remembered across each iteration throughout the array, and ultimately becomes the final, single resulting value.`],
     },
     {
       id: 2,

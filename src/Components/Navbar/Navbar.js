@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-import { logout } from "../../redux/auth-reducer";
+import { getAvatarLogo, logout } from "../../redux/auth-reducer";
 import LoginInfo from "./LoginInfo/LoginInfo";
 
 const Navbar = (props) => {
@@ -21,7 +21,9 @@ const Navbar = (props) => {
         isLogin={props.isLogin}
         login={props.login}
         logout={props.logout}
-        profile={props.profile}
+        logoAvatar={props.logoAvatar}
+        getAvatarLogo={props.getAvatarLogo}
+        id={props.id}
       />
     </nav>
   );
@@ -31,7 +33,8 @@ let mapStateToProps = (state) => {
   return {
     isLogin: state.auth.isLogin,
     login: state.auth.login,
-    profile: state.profilePage.profile,
+    logoAvatar: state.auth.logoAvatar,
+    id: state.auth.id,
   };
 };
-export default connect(mapStateToProps, { logout })(Navbar);
+export default connect(mapStateToProps, { logout,getAvatarLogo })(Navbar);

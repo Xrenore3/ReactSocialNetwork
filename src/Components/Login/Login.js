@@ -3,10 +3,11 @@ import { Field, reduxForm } from "redux-form";
 import { FormControls } from "../common/FormControls/FormControls";
 import { required, maxLengthCreator } from "../../utils/validators/validators";
 import { connect } from "react-redux";
-import { login } from "../../redux/auth-reducer";
+import { getAvatarLogo, login } from "../../redux/auth-reducer";
 import { Redirect } from "react-router-dom";
 import styles from "./../common/FormControls/FormControls.module.css";
 import classes from "./../Login/Login.module.css";
+import { getProfile } from "../../redux/profile-reducer";
 
 const Login = (props) => {
   const onSubmit = (formData) => {
@@ -16,6 +17,7 @@ const Login = (props) => {
       formData.rememberMe,
       formData.captcha
     );
+    props.getAvatarLogo(9488)
   };
   if (props.isLogin) {
     return <Redirect to="/profile" />;
@@ -81,7 +83,9 @@ const LoginReduxForm = reduxForm({ form: "login" })(LoginForm);
 const mapStateToProps = (state) => {
   return {
     isLogin: state.auth.isLogin,
+    id: state.auth.id,
     captchaUrl: state.auth.captchaUrl,
   };
 };
-export default connect(mapStateToProps, { login })(Login);
+
+export default connect(mapStateToProps, { login,getAvatarLogo })(Login);

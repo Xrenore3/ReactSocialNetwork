@@ -16,6 +16,6 @@
   text-align: center;
   height: 100%;
   width: 270px;
-  border-top: 2px solid rgba(90, 90, 90, 0.12);
+  border: 2px solid rgba(90, 90, 90, 0.12);
   background-color: rgb(84, 86, 84);
 }

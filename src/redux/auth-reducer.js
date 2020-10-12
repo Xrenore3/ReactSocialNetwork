@@ -1,8 +1,9 @@
-import { authApi, securityAPI } from "./api/api";
+import { authApi, profileAPI, securityAPI } from "./api/api";
 import { stopSubmit } from "redux-form";
-
-const SET_USER_DATA = "SET_USER_DATA";
-const SET_CAPTCHA_URL = "SET_CAPTCHA_URL";
+import smallAvatar from "./../assets/images/smallAvatar.png";
+const SET_USER_DATA = "auth-reducer/SET_USER_DATA";
+const SET_CAPTCHA_URL = "auth-reducer/SET_CAPTCHA_URL";
+const GET_AVATAR = "auth-reducer/GET_AVATAR";
 
 let initialState = {
   id: null,
@@ -10,6 +11,7 @@ let initialState = {
   login: null,
   isLogin: false,
   captchaUrl: null,
+  logoAvatar: smallAvatar,
 };
 
 const authReducer = (state = initialState, action) => {
@@ -20,19 +22,28 @@ const authReducer = (state = initialState, action) => {
     case SET_CAPTCHA_URL: {
       return { ...state, ...action.payload };
     }
+    case GET_AVATAR: {
+      return { ...state, logoAvatar: action.logoAvatar };
+    }
     default:
       return state;
   }
 };
-export const setAuthUserData = (id, email, login, isLogin) => ({
+const setAuthUserData = (id, email, login, isLogin) => ({
   type: SET_USER_DATA,
   payload: { email, id, login, isLogin },
 });
 
-export const setCaptchaUrl = (captchaUrl) => ({
+const setCaptchaUrl = (captchaUrl) => ({
   type: SET_CAPTCHA_URL,
   payload: { captchaUrl },
 });
+
+const setAvatarLogo = (logoAvatar) => ({
+  type: GET_AVATAR,
+  logoAvatar,
+});
+
 export const getAuth = () => async (dispatch) => {
   let responseData = await authApi.setAuthData();
   if (responseData.resultCode === 0) {
@@ -41,13 +52,15 @@ export const getAuth = () => async (dispatch) => {
   }
 };
 
-export const login = (email, password, rememberMe, captcha) => async (dispatch) => {
+export const login = (email, password, rememberMe, captcha) => async (
+  dispatch
+) => {
   let response = await authApi.login(email, password, rememberMe, captcha);
   if (response.data.resultCode === 0) {
     dispatch(getAuth());
   } else {
     if (response.data.resultCode === 10) {
-      dispatch(getCaptchaUrlSuccess())
+      dispatch(getCaptchaUrlSuccess());
     }
     let messageError =
       response.data.messages.length > 0
@@ -63,9 +76,15 @@ export const logout = () => async (dispatch) => {
     dispatch(setAuthUserData(null, null, null, false));
   }
 };
+
 const getCaptchaUrlSuccess = () => async (dispatch) => {
   let response = await securityAPI.getCaptchaUrl();
   dispatch(setCaptchaUrl(response.data.url));
+};
+
+export const getAvatarLogo = (userId) => async (dispatch) => {
+  let response = await profileAPI.getProfile(userId);
+  dispatch(setAvatarLogo(response.photos.small));
 };
 
 export default authReducer;

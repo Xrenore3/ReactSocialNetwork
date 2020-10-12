@@ -1,0 +1,19 @@
+.dialogName  {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+
+
+}
+
+.dialogName div {
+    border: 2px solid rgba(0, 0, 0, 0.12);
+    background-color: rgb(84, 86, 84);
+
+    padding: 10px;
+    margin: 10px;
+}
+
+.activeDialog div{
+    background-color: rgb(15, 193, 158);
+    font-style: italic;}

@@ -16,7 +16,6 @@ const Dialogs = (props) => {
     <DialogItem name={dialog.name} id={dialog.id} />
   ));
 
-  debugger;
   return (
     <div className={classes.dialogs}>
       <div className={classes.dialogsItems}>{dialogsElements}</div>

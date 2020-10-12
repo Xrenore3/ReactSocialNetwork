@@ -8,7 +8,7 @@ const Header = (props) => {
     <header className={classes.header}>
       <NavLink activeClassName={classes.activeLink} to="/profile">
       <div >
-        <img className={classes.logoImg} src={logo} />
+        <img className={classes.logoImg} src={logo} alt='Logo'/>
         <div >BOOMERANGmassege</div>
       </div>
       </NavLink>

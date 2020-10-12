@@ -6,6 +6,8 @@
   border-radius: 10px 10px 0 ;
   color: rgb(38, 38, 38);
   margin: 5px;
+  font-style: italic;
+  max-width: 250px;
 }
 .AddMessagesForm {
   margin: 20px 8px;

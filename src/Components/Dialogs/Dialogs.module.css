@@ -1,24 +1,15 @@
 .dialogs {
-  padding: 10px;
-  display: grid;
-  grid-template-columns: 2fr 8fr;
-  text-align: center;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    text-align: center;
+  
+  }
 
-}
-.dialogsItem {
-  padding: 20px;
-}
-.dialog a {
-  text-decoration: none;
-  color: black;
 
-}
-.messagesItem {
-  border: solid 2px rgb(225, 225, 225) ;
-  background-color: rgb(255, 255, 255);
-  padding: 10px 70px ;
-}
-
-.active{
-  color: goldenrod;
-}
+  .messagesItem {
+    border: solid 2px rgb(225, 225, 225) ;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 70px ;
+  }
+  
