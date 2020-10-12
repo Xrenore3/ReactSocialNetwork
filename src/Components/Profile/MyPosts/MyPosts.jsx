@@ -1,15 +1,18 @@
 import React from "react";
 import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
-import { Field, reduxForm } from "redux-form";
+import { Field, reduxForm, reset } from "redux-form";
 import {
   maxLengthCreator,
 } from "../../../utils/validators/validators";
 import { FormControls } from "../../common/FormControls/FormControls";
 import deleteIcon from "./../../../assets/images/icon_delete.svg";
+import { useDispatch } from "react-redux";
 const maxLenght15 = maxLengthCreator(150);
 
 const MyPosts = (props) => {
+  const dispatch = useDispatch()
+
   let postsElements = [...props.posts].reverse().map((post) => (
     <div key={post.id}>
       <div className={classes.btnDeletePostBlock}>
@@ -35,6 +38,7 @@ const MyPosts = (props) => {
   };
   let onAddPosts = (formData) => {
     props.addPost(formData.newPostBody);
+    dispatch(reset('AddNewPost'))
   };
   return (
     <div className={classes.postsBlock}>

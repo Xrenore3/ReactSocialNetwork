@@ -1,6 +1,7 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Route } from "react-router-dom";
-import { Field, reduxForm } from "redux-form";
+import { Field, reduxForm, reset } from "redux-form";
 import { maxLengthCreator } from "../../../utils/validators/validators";
 import { FormControls } from "../../common/FormControls/FormControls";
 import classes from "./Message.module.css";
@@ -11,10 +12,11 @@ const Message = (props) => {
   const showAllMessages = props.messages.map((message) => (
     <div className={classes.message}>{message}</div>
   ));
+  const dispatch = useDispatch()
 
   let onSubmit = (formData) => {
-    debugger;
     props.addMessages(formData.newMessageBody, props.id);
+    dispatch(reset('addMessage'))
   };
   return (
     <Route
@@ -37,7 +39,7 @@ const AddMessagesForm = (props) => {
           component={FormControls}
           typefield="textarea"
           name="newMessageBody"
-          placeholder="Write here, bitch"
+          placeholder="Write here"
           validate={[maxLenght15]}
         ></Field>
         <button>Send message</button>

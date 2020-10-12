@@ -1,0 +1,32 @@
+.userBlock {
+  background-color: rgb(179, 179, 179);
+  border: solid 1px rgb(133, 133, 133);
+
+  height: 220px;
+  width: 300px;
+  text-align: center;
+  margin: 10px 35%;
+  padding: 20px 0 20px;
+}
+
+.userBlock img {
+  border-radius: 50%;
+  width: 150px;
+  border: solid 1px rgb(67, 67, 67);
+
+}
+.userName{
+  font-weight: bold;
+  color: rgb(49, 49, 49);
+  margin: 10px;
+}
+.userBlock button {
+  background-color: rgb(15, 193, 158);
+  width: 80px;
+  font-size: 16px;
+  padding: 2px 7px;
+  color: rgb(230, 230, 230);
+  cursor: pointer;
+  border: solid 1px rgb(11, 151, 123);
+
+}

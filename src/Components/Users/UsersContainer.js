@@ -19,6 +19,7 @@ import {
   getPortionNumber,
 } from "../../redux/selectors/users-selector";
 import Paginator from "../common/Paginator/Paginator";
+import classes from './Users.module.css'
 
 class UsersContainer extends React.Component {
   componentDidMount() {
@@ -35,7 +36,7 @@ class UsersContainer extends React.Component {
       return <Preloader />;
     }
     return (
-      <>
+      <div className={classes.usersBlock}>
         <Paginator
           statePortionNumber={this.props.statePortionNumber}
           currentPage={this.props.currentPage}
@@ -50,7 +51,7 @@ class UsersContainer extends React.Component {
           toggleIsFetching={this.props.toggleIsFetching}
           userFollowingProgress={this.props.userFollowingProgress}
         />
-      </>
+      </div>
     );
   }
 }
