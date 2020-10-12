@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./ProfileInfo.module.css";
 import Preloader from "../../common/Preloader/Preloader";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
-import avatart from "./../../../assets/images/avatar.jpeg";
+import noAvatart from "./../../../assets/images/smallAvatar.png";
 import { useState } from "react";
 import ProfileDataForm from "./ProfileDataForm/ProfileDataForm";
 import logoInformAboutUser from "./../../../assets/images/icon_information__about_user.png";
@@ -29,7 +29,7 @@ const ProfileInfo = (props) => {
         <img
           alt="avatar"
           className={classes.avatar}
-          src={props.profile.photos.large || avatart}
+          src={props.profile.photos.large || noAvatart}
         />
         <div>
           {props.isOwner && (
