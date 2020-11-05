@@ -1,23 +1,24 @@
 .selectedPage {
-    color:  rgb(87, 196, 109);
-    font-weight: bolder;
+  color: white;
+  font-weight: bolder;
+  background-color: rgb(15, 193, 158);
+  border: solid 2px rgb(95, 175, 124);
+  border-radius: 3px;
 }
 
 .btnPrevNext {
-    color:  rgb(87, 196, 109);
-    background-color: rgb(49, 49, 49);
-    height: auto;
-    font-size: 15px;
-    padding: 3px;
-    width: 20px;
-    color: aliceblue;
-    cursor: pointer;
-    font-weight: bolder;
-
+  background-color: rgb(49, 49, 49);
+  padding: 5px;
+  width: 20px;
+  color: aliceblue;
+  cursor: pointer;
+  font-weight: bolder;
+  margin: 10px 0;
 }
 .allPages span {
-    display: inline-block;
-    height: 10px;
-    width: 20px;
-    padding: 5px;
+  margin: 0 10px;
+  cursor: pointer;
+  display: inline-block;
+  width: 20px;
+  padding: 5px;
 }

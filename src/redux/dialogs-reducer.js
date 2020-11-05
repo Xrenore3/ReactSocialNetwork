@@ -1,11 +1,5 @@
 const ADD_NEW_MESSAGE = "ADD-NEW-MESSAGE";
 
-export const addMessages = (newMessageBody, id) => ({
-  type: ADD_NEW_MESSAGE,
-  newMessageBody,
-  id,
-});
-
 let initialState = {
   dialogs: [
     {
@@ -36,7 +30,10 @@ let initialState = {
     {
       id: 4,
       name: "Sergiy",
-      messages: ["How are you?",'Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.'],
+      messages: [
+        "How are you?",
+        "Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.",
+      ],
     },
   ],
 };
@@ -62,5 +59,10 @@ const dialogsReducer = (state = initialState, action) => {
       return state;
   }
 };
+export const addMessages = (newMessageBody, id) => ({
+  type: ADD_NEW_MESSAGE,
+  newMessageBody,
+  id,
+});
 
 export default dialogsReducer;

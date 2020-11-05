@@ -6,7 +6,11 @@ export const FormControls = ({ input, meta, ...props }) => {
   return (
     <div className={styles.formControl}>
       {tagForm === "textarea" ? (
-        <textarea {...input} {...props} className={hasError && styles.error} />
+        <textarea
+          {...input}
+          {...props}
+          className={hasError === true ? styles.error : undefined}
+        />
       ) : (
         <input
           type={tagForm}

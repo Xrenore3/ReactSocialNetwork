@@ -50,21 +50,23 @@ const ProfileDataForm = (props) => {
       </div>
       <div>
         <b>Contacts:</b>
-        {Object.keys(props.profile.contacts).map((key) => (
-          <div key={key}>
-            <div>
-              <b>{key}: </b>
-              <Field
-                name={"contacts." + key}
-                component={FormControls}
-                typefield="text"
-              />
+        <div className={classes.contactsBlock}>
+          {Object.keys(props.profile.contacts).map((key) => (
+            <div key={key}>
+              <div>
+                <b>{key}: </b>
+                <Field
+                  name={"contacts." + key}
+                  component={FormControls}
+                  typefield="text"
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-      <div className={classes.buttonBlock}>
-        <button>save</button>
+      <div className={classes.buttonSave}>
+        <button>Save</button>
       </div>
 
       {props.error && (

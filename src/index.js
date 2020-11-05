@@ -12,8 +12,8 @@ let rerenderEntireTree = () => {
   ReactDOM.render(
     <HashRouter basename={process.env.PUBLIC_URL} >
       <Provider store={store}>
-        <App/>
-      </Provider>
+        <App />
+      </Provider> 
     </HashRouter>,
     document.getElementById("root")
   );

@@ -1,19 +1,30 @@
-.item {
-  background-color: rgb(15, 193, 158);
-  border: solid 2px rgb(13, 158, 129) ;
-
+/* reset */
+body,
+p,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
 }
 
+/* mobile styles */
+.item {
+  background-color: rgb(15, 193, 158);
+  border: solid 2px rgb(13, 158, 129);
+}
 .item .avatar {
   border-radius: 50%;
   border: solid 1px grey;
   width: 60px;
 }
-
 .avatarAndFullNameBlock {
-  font-weight: bold;
-  color: rgb(56, 56, 56);
-
+  font-weight: 700;
+  color: #262626;
   padding: 10px;
   display: table;
 }
@@ -27,12 +38,28 @@
   text-align: center;
   font-style: italic;
   color: rgb(38, 38, 38);
-
 }
 .iconLike {
   width: 16px;
 }
-.likeBlock{
-  color:rgb(203,50,50);
+.likeBlock {
+  color: rgb(203, 50, 50);
   text-align: center;
+}
+
+/* large tablets & laptop styles */
+@media screen and (min-width: 960px) {
+  .item {
+    padding-bottom: 20px;
+  }
+  .item .avatar {
+    width: 80px;
+  }
+  .avatarAndFullNameBlock {
+    font-size: 1.1em;
+  }
+  .postMessage {
+    font-size: 1.2em;
+  }
+
 }

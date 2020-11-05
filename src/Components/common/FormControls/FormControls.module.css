@@ -14,23 +14,23 @@
   padding: 5px;
 }
 .formControl {
-  color: rgb(100, 100, 100);
+  color: #646464;
   padding-left: 10px;
   margin: 0;
 }
 .formControlInput {
   position: relative;
-  width: 86%;
+  width: 100%;
   font-size: 16px;
   height: auto;
-  padding: 5px;
+  padding: 4px;
 }
 .formControlInput[type="checkbox"] {
   width: auto;
 }
 .formControl textarea {
-  color: rgb(100, 100, 100);
-  width: 87%;
+  color: rgb(38, 38, 38);
+  width: 100%;
   height: auto;
   font-size: 16px;
   padding: 5px;

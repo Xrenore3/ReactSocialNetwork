@@ -3,25 +3,27 @@ import classes from "./LoginInfo.module.css";
 import { NavLink } from "react-router-dom";
 
 const LoginInfo = (props) => {
-  useEffect(()=> {
-    props.getAvatarLogo(props.id)})
-  
+  useEffect(() => {
+    props.getAvatarLogo(props.id);
+  });
 
   return (
-    <div className={classes.loginBlock}>
+    <div>
       {props.isLogin ? (
-        <div>
-          <div>{props.login}</div>
-          <img onClick={props.getAvatarLogo(9488)} className={classes.avatar} alt="avatar" src={props.logoAvatar} />
-          <div>
-            <button className={classes.logoutButton} onClick={props.logout}>
-              Log Out
-            </button>
-          </div>
+        <div className={classes.loginBlock}>
+          <p>{props.login}</p>
+          <img
+            className={classes.avatar}
+            alt="avatar"
+            src={props.logoAvatar}
+          />
+          <button className={classes.logoutButton} onClick={() => props.logout()}>
+            Log Out
+          </button>
         </div>
       ) : (
         <NavLink to={"/login"}>
-          <button className={classes.logoutButton}>Login</button>
+          <button className={classes.loginButton}>Login</button>
         </NavLink>
       )}
     </div>

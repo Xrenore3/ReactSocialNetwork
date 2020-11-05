@@ -1,11 +1,25 @@
+/* reset */
+body,
+p,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+
+/* mobile styles  */
 .loginBlock {
-  background-color: red;
-  font-weight: bold;
-  padding: 10%;
-  text-align: center;
-  margin: 0 42% 0 -42%;
-  background-color: rgb(179, 179, 179);
-  color: rgb(68, 68, 68);
+  display: flex;
+  margin: 10px 10px 0 0;
+  align-self: center;
+}
+.loginBlock p {
+  display: none;
 }
 
 .avatar {
@@ -13,7 +27,10 @@
   border: solid 1px rgb(67, 67, 67);
   width: 60px;
 }
+
 .logoutButton {
+  align-self: center;
+  margin-left: 10px;
   background-color: rgb(15, 193, 158);
   width: 60px;
   font-size: 12px;
@@ -21,4 +38,30 @@
   color: rgb(230, 230, 230);
   cursor: pointer;
   border: solid 1px rgb(11, 151, 123);
+}
+.loginButton{
+  background-color: #0fc19e;
+    color: #e6e6e6;
+    cursor: pointer;
+    border: 1px solid #0b977b;
+    margin: 20px;
+    font-size: 1em;
+    padding: 4px 15px;
+}
+/* large tablets & laptop styles */
+@media screen and (min-width: 960px) {
+  .loginBlock {
+    margin: 30px 30px;
+  }
+  .loginBlock * {
+    align-self: center;
+    margin-left: 15px;
+  }
+  .loginBlock p {
+    display: inline;
+    font-weight: 600;
+  }
+  .avatar {
+    width: 80px;
+  }
 }

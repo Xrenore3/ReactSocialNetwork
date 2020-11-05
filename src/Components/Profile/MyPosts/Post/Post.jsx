@@ -16,9 +16,9 @@ const Post = (props) => {
         />
         <span>Roman Chaus</span>
       </div>
-      <div className={classes.postMessage}>
+      <p className={classes.postMessage}>
         <span>"{props.message}"</span>
-      </div>
+      </p>
 
       <div className={classes.likeBlock}>
         <img className={classes.iconLike} src={iconLike} alt='icon Like' />

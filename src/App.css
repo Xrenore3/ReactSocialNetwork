@@ -1,10 +1,10 @@
-.app-wrapper {
+/* .app-wrapper {
   margin: 0 auto;
   display: grid;
   grid-template-areas:
     "h  n"
     "content content";
-  grid-template-rows: 150px 100%;
+  grid-template-rows: 150px;
   grid-template-columns: 2fr 10fr;
 
 }
@@ -18,7 +18,9 @@
 }
 .sideBar {
   background-color: rgb(234,234,234);
-  /* box-shadow: 0 0 2px 2px rgb(255, 255, 255);   */
 }
 
-
+ */
+ body {
+   background: url(./assets/images/background.jpg);
+ }

@@ -1,30 +1,76 @@
+/* reset */
+body,
+p,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+/* mobile styles  */
 .message {
+  font-size: 0.9em;
   padding: 10px;
   width: fit-content;
-  background-color: rgb(15,193,158);
-  border: solid 2px rgb(13, 158, 129);
-  border-radius: 10px 10px 0 ;
-  color: rgb(38, 38, 38);
+  background-color: #0fc19e;
+  border: 2px solid #0d9e81;
+  border-radius: 15px 15px 0;
+  color: #262626;
   margin: 5px;
   font-style: italic;
-  max-width: 250px;
+  max-width: 200px;
 }
 .AddMessagesForm {
   margin: 20px 8px;
-
 }
 .addMessageBlock {
-padding: 15px 50px;
-background-color: rgb(235, 235, 235);
-border: solid 2px rgb(220, 220, 220);
+  padding: 15px 50px;
+  background-color: rgb(235, 235, 235);
+  border: solid 2px rgb(220, 220, 220);
 }
 
 .addMessageBlock button {
-  background-color: rgb(49, 49, 49);
+  margin-top: 10px;
+  background-color: #313131;
   height: auto;
-  font-size: 15px;
+  font-size: 0.8em;
   padding: 3px 10px;
   width: auto;
-  color: aliceblue;
+  color: #f0f8ff;
   cursor: pointer;
+  transition: all 0.3s linear;
+}
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+  .message {
+    font-size: 1em;
+    margin: 10px;
+    max-width: 230px;
+  }
+  .addMessageBlock button {
+    font-size: 0.9em;
+  }
+  .AddMessagesForm {
+    margin: 20px 50px;
+  }
+}
+/* large tablets & laptop styles */
+@media screen and (min-width: 960px) {
+  .message {
+    font-size: 1.1em;
+    margin: 10px;
+    max-width: 320px;
+  }
+  .AddMessagesForm {
+    margin: 30px 18%;
+  }
+  .addMessageBlock button {
+    margin-top: 20px;
+    font-size: 1em;
+    padding: 3px 10px;
+  }
 }

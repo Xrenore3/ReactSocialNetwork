@@ -8,7 +8,7 @@ import {
 import { FormControls } from "../../common/FormControls/FormControls";
 import deleteIcon from "./../../../assets/images/icon_delete.svg";
 import { useDispatch } from "react-redux";
-const maxLenght15 = maxLengthCreator(150);
+const maxLenght150 = maxLengthCreator(150);
 
 const MyPosts = (props) => {
   const dispatch = useDispatch()
@@ -41,13 +41,13 @@ const MyPosts = (props) => {
     dispatch(reset('AddNewPost'))
   };
   return (
-    <div className={classes.postsBlock}>
+    <section className={classes.postsBlock}>
       <div className={classes.addPostBlock}>
         <h3> New post</h3>
         <AddNewPostReduxForm onSubmit={onAddPosts} />
       </div>
       <div className={classes.posts}>{postsElements}</div>
-    </div>
+    </section>
   );
 };
 
@@ -60,7 +60,7 @@ const AddNewPostForm = (props) => {
           component={FormControls}
           name="newPostBody"
           placeholder="Write here"
-          validate={[maxLenght15]}
+          validate={[maxLenght150]}
         ></Field>
       </div>
       <div className={classes.btnAddPostBlock}>

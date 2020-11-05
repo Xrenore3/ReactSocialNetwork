@@ -73,7 +73,8 @@ const LoginForm = (props) => {
         )}
       </form>
       romanchaus519@gmail.com<br/>
-      655831
+      655831 <br/>
+      If you write a wrong password you'll see working captcha
 
     </div>
   );

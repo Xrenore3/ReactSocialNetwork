@@ -5,7 +5,6 @@ import { Route, Switch, withRouter } from "react-router-dom";
 import DialogsContainer from "./Components/Dialogs/DialogsContainer";
 import UsersContainer from "./Components/Users/UsersContainer";
 import ProfileContainer from "./Components/Profile/ProfileContainer";
-import Header from "./Components/Header/Header";
 import Login from "./Components/Login/Login";
 import { compose } from "redux";
 import { connect } from "react-redux";
@@ -32,26 +31,19 @@ class App extends React.Component {
       return <Preloader />;
     }
     return (
-      <div className="app-wrapper">
-        <Header />
+      <>
         <Navbar />
-        <div className="app-wrapper-content">
-          <div className="sideBar"></div>
-          <div className="mainContent">
-            <Switch>
-              <Route
-                render={() => <ProfileContainer />}
-                path={"/profile/:userId?"}
-              />
-              <Route render={() => <DialogsContainer />} path={"/dialogs"} />
-              <Route render={() => <UsersContainer />} path={"/users"} />
-              <Route render={() => <Login />} path={"/login"} />
-              {/* <Route render={() => <div>Not found</div>} path={"/*"} /> */}
-            </Switch>
-          </div>
-          <div className="sideBar"></div>
-        </div>
-      </div>
+        <Switch>
+          <Route
+            render={() => <ProfileContainer />}
+            path={"/profile/:userId?"}
+          />
+          <Route render={() => <DialogsContainer />} path={"/dialogs"} />
+          <Route render={() => <UsersContainer />} path={"/users"} />
+          <Route render={() => <Login />} path={"/login"} />
+          {/* <Route render={() => <div>Not found</div>} path={"/*"} /> */}
+        </Switch>
+      </>
     );
   }
 }

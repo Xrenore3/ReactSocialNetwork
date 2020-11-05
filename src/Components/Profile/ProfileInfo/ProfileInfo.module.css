@@ -1,86 +1,146 @@
+/* reset */
+body,
+p,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+
+/* mobile styles  */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
 .discriptionBlock {
-  border: solid 2px rgb(225, 225, 225) ;
-  margin: 20px 10%;
-  padding: 0 28%;
-  background-color: rgb(255, 255, 255);
+  max-width: 60%;
+  margin: 20px 20%;
 }
 .discriptionBlock .avatar {
-  max-width: 250px;
+  grid-column: 4/5;
   border-radius: 1px;
-  box-shadow: 0 0 3px 2px;
-  margin: 20px 20px 0px;
+  box-shadow: 0 0 2px 1px;
 }
 .discriptionBlock input[type="file"] {
   display: none;
 }
-.choosePhotoButton {
-  background-color: rgb(15, 193, 158);
-  height: 100%;
-  font-size: 10px;
+.discriptionBlock .choosePhotoButton {
+  margin-top: 10px;
+  text-align: center;
+  width: 80px;
+  grid-column: 4/6;
+  background-color: #0fc19e;
+  font-size: 0.6em;
   padding: 2px 7px;
-  color: aliceblue;
+  color: #f0f8ff;
   cursor: pointer;
-  border: solid 1px grey;
-  margin-left: 18px;
+  border: 1px solid grey;
 }
-
-.aboutInfo {
-  padding: 10px;
+.discriptionBlock .aboutInfo {
   text-align: center;
+  grid-column: 4/5;
 }
-.fullName {
-  color: black;
-  font-weight: bold;
-  font-size: 23px;
+.discriptionBlock .fullName {
+  color: #000;
+  font-weight: bolder;
   margin: 0;
-}
-.status {
-  color: rgb(80, 80, 80);
+  font-size: 1.3em;
 }
 
-.logoInformAboutUser {
-  background-color: rgb(255, 255, 255);
-  margin: 0;
-  color: black;
-  font-weight: bold;
-  font-size: 20px;
-  margin: 0 10%;
-  text-align: center;
-  padding-top: 10px;
-  border: solid 2px rgb(225, 225, 225) ;
-
-  height: 45px;
+/* User information setion */
+.informAboutUserWrapper .sectionHeader {
+  display: flex;
+  justify-content: center;
 }
+.informAboutUserWrapper .sectionHeader img {
+  margin-right: 15px;
 
-.logoInformAboutUser p {
-  margin: 15px;
+  height: 25px;
+  align-self: center;
+}
+.informAboutUserWrapper .sectionHeader h3 {
+  font-size: 1.1em;
   display: inline;
 }
-
 .profileInfoBlock {
-  border: solid 2px rgb(225, 225, 225) ;
-  background-color: rgb(255, 255, 255);
-  margin: 0 10%;
-  padding: 0 18%;
-  color: rgb(80, 80, 80);
+  margin: 0 auto;
+  width: 380px;
 }
-.profileInfoRow {
-  padding: 7px;
+.profileInfoBlock .profileInfoRow {
+  padding-top: 8px;
 }
-
-.profileInfoContactsBlock {
-  padding: 2px 15px;
+.profileInfoBlock .profileInfoContactsBlock {
+  padding-left: 10px;
 }
-.profileInfoBlock button {
-  background-color: rgb(49, 49, 49);
-  height: auto;
-  font-size: 15px;
-  padding: 3px;
-  width: 150px;
-  color: aliceblue;
+.profileInfoBlock .buttonEdit button {
+  margin-top: 10px;
+  background-color: #313131;
+  font-size: 0.8em;
+  padding: 2px;
+  width: 85px;
+  color: #f0f8ff;
   cursor: pointer;
 }
-.buttonBlock {
+.profileInfoBlock .buttonEdit {
   text-align: center;
-  padding: 10px;
+}
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+  .discriptionBlock .choosePhotoButton {
+    font-size: 0.7em;
+    margin-top: 15px;
+    width: 100px;
+    padding: 2px 7px;
+  }
+  .profileInfoBlock .buttonEdit button {
+    font-size: 0.9em;
+    padding: 3px;
+    width: 100px;
+  }
+  .informAboutUserWrapper .sectionHeader {
+    margin-right: 4%;
+  }
+  .profileInfoBlock .profileInfoRow {
+    padding-bottom: 15px;
+  }
+  .profileInfoBlock .profileInfoContactsBlock {
+    padding: 5px 0 0 15px;
+  }
+}
+
+/* large tablets & laptop styles */
+@media screen and (min-width: 960px) {
+  .discriptionBlock .avatar {
+    width: 350px;
+  }
+  .discriptionBlock .choosePhotoButton {
+    font-size: 0.8em;
+    margin-top: 15px;
+    width: 110px;
+    padding: 3px 8px;
+  }
+  .discriptionBlock .fullName {
+    margin-top: 10px;
+    font-size: 1.4em;
+  }
+  .informAboutUserWrapper .sectionHeader h3 {
+    font-size: 1.2;
+  }
+  .profileInfoBlock .profileInfoRow {
+    padding-bottom: 25px;
+    font-size: 1.1em;
+  }
+  .profileInfoBlock .profileInfoContactsBlock {
+    padding: 10px 0 0 25px;
+  }
+  .profileInfoBlock .buttonEdit button {
+    font-size: 1em;
+    padding: 4px;
+    width: 120px;
+  }
 }

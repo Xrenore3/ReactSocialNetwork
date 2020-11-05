@@ -1,5 +1,15 @@
-.usersBlock {
+.usersBlock{
     text-align: center;
-    background-color: white;
-
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+/* large tablets & laptop styles */
+@media screen and (min-width: 960px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 20%;
+  }
 }

@@ -1,32 +1,85 @@
-.userBlock {
-  background-color: rgb(179, 179, 179);
-  border: solid 1px rgb(133, 133, 133);
+/* reset */
+body,
+p,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
 
-  height: 220px;
-  width: 300px;
+/* mobile styles  */
+.userBlock {
+  background-color: rgb(232, 232, 232);
+  border: solid 1px rgb(201, 201, 201);
+  margin: 20px auto;
+  width: 200px;
   text-align: center;
-  margin: 10px 35%;
-  padding: 20px 0 20px;
+  padding: 20px 0;
 }
 
 .userBlock img {
   border-radius: 50%;
-  width: 150px;
-  border: solid 1px rgb(67, 67, 67);
-
+  width: 100px;
+  border: solid 1px rgb(201, 201, 201);
 }
-.userName{
+.userName {
   font-weight: bold;
   color: rgb(49, 49, 49);
   margin: 10px;
 }
 .userBlock button {
-  background-color: rgb(15, 193, 158);
+  background-color: #0fc19e;
   width: 80px;
-  font-size: 16px;
+  font-size: 0.8em;
   padding: 2px 7px;
-  color: rgb(230, 230, 230);
+  color: #e6e6e6;
   cursor: pointer;
-  border: solid 1px rgb(11, 151, 123);
+  border: 1px solid #0b977b;
+}
 
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+  .usersBlock {
+    height: 200px;
+    width: 220px;
+    padding: 20px 0;
+  }
+  .userName {
+    font-weight: 700;
+    margin: 20px;
+    font-size: 1.1em;
+  }
+  .userBlock button {
+    width: 80px;
+    font-size: 0.9em;
+    padding: 4px 7px;
+  }
+}
+
+/* large tablets & laptop styles */
+@media screen and (min-width: 960px) {
+  .userBlock {
+    margin: 20px auto;
+    height: 220px;
+    width: 250px;
+    padding: 30px 0;
+  }
+  .userBlock img {
+    width: 130px;
+  }
+  .userName {
+    font-weight: 700;
+    margin: 20px;
+    font-size: 1.2em;
+  }
+  .userBlock button {
+    font-size: 1em;
+    padding: 5px 10px;
+  }
+ 
 }

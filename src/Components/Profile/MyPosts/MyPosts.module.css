@@ -1,38 +1,51 @@
-.postsBlock {
-  margin: 20px 10%;
-  background-color: white;
-  padding: 1px 18% 20px;
-  border: solid 2px rgb(225, 225, 225);
+
+
+/* reset */
+body,
+p,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
 }
 
+/* mobile styles */
+.postsBlock {
+  margin-top: 30px;
+}
 .postsBlock h3 {
   text-align: center;
-  padding-top: 10px;
 }
-.postsBlock .btnAddPost {
-  background-color: rgb(49, 49, 49);
-  height: auto;
-  font-size: 15px;
-  padding: 3px;
-  width: 150px;
-  color: aliceblue;
+.formBlock {
+  width: 80%;
+  margin: 0 10%;
+}
+.btnAddPostBlock .btnAddPost {
+  margin-top: 10px;
+  margin-top: 10px;
+  background-color: #313131;
+  font-size: 0.8em;
+  padding: 2px;
+  width: 85px;
+  color: #f0f8ff;
   cursor: pointer;
 }
 .btnAddPostBlock {
-  padding: 10px;
   text-align: center;
 }
-.addPostBlock {
-  background-color: rgb(235, 235, 235);
-  border: solid 2px rgb(220, 220, 220);
-
-  margin-top: 20px;
+.posts {
+  max-width: 76%;
+  margin: 10px 12%;
 }
-.formBlock {
-  text-align: center;
+.posts > div {
+  margin-bottom: 10px;
 }
 .btnDeletePost {
-  background-color: white;
   border: 0;
   width: 12px;
   cursor: pointer;
@@ -41,4 +54,44 @@
 }
 .btnDeletePostBlock {
   text-align: right;
+}
+
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+  .formBlock {
+    width: 60%;
+    margin: 0 20%;
+  }
+  .btnAddPostBlock .btnAddPost {
+    font-size: 0.9em;
+    margin-top: 15px;
+    padding: 3px;
+    width: 100px;
+  }
+}
+
+/* large tablets & laptop styles */
+@media screen and (min-width: 960px) {
+  .postsBlock h3 {
+    font-size: 1.3em;
+  }
+  .formBlock {
+    width: 50%;
+    margin: 0 25%;
+  }
+  .btnAddPostBlock .btnAddPost {
+    margin-top: 20px;
+    font-size: 1em;
+    padding: 4px;
+    width: 120px;
+  }
+
+}
+
+/* large tablets & laptop styles */
+@media screen and (min-width: 960px) {
+  .posts {
+    max-width: 40%;
+    margin: 10px 30%;
+  }
 }

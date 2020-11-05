@@ -1,19 +1,48 @@
-.dialogName  {
-    text-decoration: none;
-    color: white;
-    text-align: center;
-
-
+/* reset */
+body,
+p,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+/* mobile styles  */
+.dialogName {
+  text-decoration: none;
+  color: white;
+  text-align: center;
 }
 
 .dialogName div {
-    border: 2px solid rgba(0, 0, 0, 0.12);
-    background-color: rgb(84, 86, 84);
-
-    padding: 10px;
-    margin: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.12);
+  background-color: rgb(84, 86, 84);
+  padding: 5px;
+  margin: 0 10px 10px 0;
 }
 
-.activeDialog div{
-    background-color: rgb(15, 193, 158);
-    font-style: italic;}
+.activeDialog div {
+  transition: all 0.3s linear;
+  background-color: rgb(15, 193, 158);
+  font-style: italic;
+}
+
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+  .dialogName  div{
+    margin: 0 15% 20px 0;
+    padding: 10px 0;
+  }
+}
+/* large tablets & laptop styles */
+@media screen and (min-width: 960px) {
+  .dialogName  div{
+    margin: 0 25% 20px 0;
+    padding: 15px 0;
+    font-size: 1.1em;
+  }
+}

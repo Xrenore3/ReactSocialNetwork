@@ -24,21 +24,19 @@ const ProfileInfo = (props) => {
     });
   };
   return (
-    <div>
-      <div className={classes.discriptionBlock}>
+    <>
+      <section className={`${classes.discriptionBlock} ${classes.grid}`}>
         <img
           alt="avatar"
           className={classes.avatar}
           src={props.profile.photos.large || noAvatart}
         />
-        <div>
-          {props.isOwner && (
-            <label className={classes.choosePhotoButton}>
-              Choose a photo
-              <input onChange={onMainPhotoChange} type="file" />
-            </label>
-          )}
-        </div>
+        {props.isOwner && (
+          <label className={classes.choosePhotoButton}>
+            Choose a photo
+            <input onChange={onMainPhotoChange} type="file" />
+          </label>
+        )}
 
         <div className={classes.aboutInfo}>
           <p className={classes.fullName}>{props.profile.fullName}</p>
@@ -48,27 +46,29 @@ const ProfileInfo = (props) => {
             isOwner={props.isOwner}
           />
         </div>
-      </div>
-      <div className={classes.logoInformAboutUser}>
-        <img src={logoInformAboutUser} alt="logo inform about user" />
-        <p>User information</p>
-      </div>
-      {!editMode ? (
-        <ProfileData {...props} activateEditMode={() => setEditMode(true)} />
-      ) : (
-        <ProfileDataForm
-          profile={props.profile}
-          initialValues={props.profile}
-          onSubmit={onSubmit}
-        />
-      )}
-    </div>
+      </section>
+      <section className={classes.informAboutUserWrapper}>
+        <div className={classes.sectionHeader}>
+          <img src={logoInformAboutUser} alt="logo inform about user" />
+          <h3>User information</h3>
+        </div>
+        {!editMode ? (
+          <ProfileData {...props} activateEditMode={() => setEditMode(true)} />
+        ) : (
+          <ProfileDataForm
+            profile={props.profile}
+            initialValues={props.profile}
+            onSubmit={onSubmit}
+          />
+        )}
+      </section>
+    </>
   );
 };
 
 const ProfileData = (props) => {
   return (
-    <div className={classes.profileInfoBlock}>
+    <section className={classes.profileInfoBlock}>
       <div className={classes.profileInfoRow}>
         <b>About me: </b>
         {props.profile.aboutMe}
@@ -90,12 +90,12 @@ const ProfileData = (props) => {
           </div>
         ))}
       </div>
-      <div className={classes.buttonBlock}>
+      <div className={classes.buttonEdit}>
         {props.isOwner && (
           <button onClick={props.activateEditMode}>Edit</button>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 
