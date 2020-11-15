@@ -3,12 +3,13 @@ import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
 import { Field, reduxForm, reset } from "redux-form";
 import {
-  maxLengthCreator,
+  maxLengthCreator, required,
 } from "../../../utils/validators/validators";
 import { FormControls } from "../../common/FormControls/FormControls";
 import deleteIcon from "./../../../assets/images/icon_delete.svg";
 import { useDispatch } from "react-redux";
 const maxLenght150 = maxLengthCreator(150);
+
 
 const MyPosts = (props) => {
   const dispatch = useDispatch()
@@ -60,7 +61,7 @@ const AddNewPostForm = (props) => {
           component={FormControls}
           name="newPostBody"
           placeholder="Write here"
-          validate={[maxLenght150]}
+          validate={[maxLenght150,required]}
         ></Field>
       </div>
       <div className={classes.btnAddPostBlock}>

@@ -28,7 +28,7 @@ let Paginator = ({
             setPortionNumber(portionNumber - 1);
           }}
         >
-           {'<'}
+          {"<"}
         </button>
       )}
       {pages
@@ -39,7 +39,10 @@ let Paginator = ({
         .map((page) => {
           return (
             <span
-              className={currentPage === page && classes.selectedPage}
+              key={page}
+              className={
+                currentPage === page ? classes.selectedPage : undefined
+              }
               onClick={() => onPageChanged(page, portionNumber)}
             >
               {page}
@@ -53,7 +56,7 @@ let Paginator = ({
             setPortionNumber(portionNumber + 1);
           }}
         >
-          {'>'}
+          {">"}
         </button>
       )}
     </div>

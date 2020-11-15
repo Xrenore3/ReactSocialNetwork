@@ -10,7 +10,7 @@ const maxLenght15 = maxLengthCreator(100);
 
 const Message = (props) => {
   const showAllMessages = props.messages.map((message) => (
-    <div className={classes.message}>{message}</div>
+    <div key={Math.random()*100} className={classes.message}>{message}</div>
   ));
   const dispatch = useDispatch()
 

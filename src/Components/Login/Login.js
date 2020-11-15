@@ -7,7 +7,6 @@ import { getAvatarLogo, login } from "../../redux/auth-reducer";
 import { Redirect } from "react-router-dom";
 import styles from "./../common/FormControls/FormControls.module.css";
 import classes from "./../Login/Login.module.css";
-import { getProfile } from "../../redux/profile-reducer";
 
 const Login = (props) => {
   const onSubmit = (formData) => {

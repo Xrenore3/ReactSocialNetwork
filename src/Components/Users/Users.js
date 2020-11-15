@@ -7,6 +7,7 @@ let Users = (props) => {
     <div className={classes.grid}>
       {props.users.map((user) => (
         <User
+          key={user.name}
           user={user}
           userFollowingProgress={props.userFollowingProgress}
           unfollow={props.unfollow}

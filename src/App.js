@@ -34,6 +34,7 @@ class App extends React.Component {
       <>
         <Navbar />
         <Switch>
+          <Route exact render={() => <ProfileContainer />} path={"/"} />
           <Route
             render={() => <ProfileContainer />}
             path={"/profile/:userId?"}
@@ -41,7 +42,7 @@ class App extends React.Component {
           <Route render={() => <DialogsContainer />} path={"/dialogs"} />
           <Route render={() => <UsersContainer />} path={"/users"} />
           <Route render={() => <Login />} path={"/login"} />
-          {/* <Route render={() => <div>Not found</div>} path={"/*"} /> */}
+          <Route render={() => <h1>Not found</h1>} path={"/*"} />
         </Switch>
       </>
     );
