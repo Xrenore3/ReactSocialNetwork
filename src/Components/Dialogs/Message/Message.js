@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Route } from "react-router-dom";
 import { Field, reduxForm, reset } from "redux-form";
-import { maxLengthCreator } from "../../../utils/validators/validators";
+import { maxLengthCreator, required } from "../../../utils/validators/validators";
 import { FormControls } from "../../common/FormControls/FormControls";
 import classes from "./Message.module.css";
 
@@ -40,7 +40,7 @@ const AddMessagesForm = (props) => {
           typefield="textarea"
           name="newMessageBody"
           placeholder="Write here"
-          validate={[maxLenght15]}
+          validate={[maxLenght15,required]}
         ></Field>
         <button>Send message</button>
       </div>

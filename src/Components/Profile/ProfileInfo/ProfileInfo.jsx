@@ -71,7 +71,7 @@ const ProfileData = (props) => {
     <section className={classes.profileInfoBlock}>
       <div className={classes.profileInfoRow}>
         <b>About me: </b>
-        {props.profile.aboutMe}
+        {props.profile.aboutMe || "Is empty"}
       </div>
       <div className={classes.profileInfoRow}>
         <b>Looking for a job: </b>
@@ -79,18 +79,18 @@ const ProfileData = (props) => {
       </div>
       <div className={classes.profileInfoRow}>
         <b>My professional skills: </b>
-        {props.profile.lookingForAJobDescription}
+        {props.profile.lookingForAJobDescription || "Is empty"}
       </div>
       <div className={classes.profileInfoRow}>
         <b>Contacts:</b>
         {Object.keys(props.profile.contacts).map((key) => (
           <div key={key} className={classes.profileInfoContactsBlock}>
             <b>{key}: </b>
-            {props.profile.contacts[key]}
+            {props.profile.contacts[key] || "Is empty"}
           </div>
         ))}
       </div>
-      <div className={classes.buttonEdit}>
+      <div className={classes.buttonEdit} >
         {props.isOwner && (
           <button onClick={props.activateEditMode}>Edit</button>
         )}

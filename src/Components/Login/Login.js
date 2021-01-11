@@ -46,13 +46,8 @@ const LoginForm = (props) => {
           name="password"
           validate={[required, maxLenght15]}
         />
-        <Field
-          component={FormControls}
-          typefield="checkbox"
-          name="rememberMe"
-        />
+      
         <div className={classes.btnLoginBlock}>
-          <span>remember me</span>
           <button className={classes.btnLogin}>Login</button>
         </div>
 
