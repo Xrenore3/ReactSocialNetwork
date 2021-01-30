@@ -1,5 +1,13 @@
 const ADD_NEW_MESSAGE = "ADD-NEW-MESSAGE";
 
+
+
+type DialogsType = {
+  id: number,
+  name:string,
+  messages: Array<string>
+}
+
 let initialState = {
   dialogs: [
     {
@@ -35,9 +43,12 @@ let initialState = {
         "Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.",
       ],
     },
-  ],
+  ] as Array<DialogsType>
 };
-const dialogsReducer = (state = initialState, action) => {
+
+export type InitialStateType = typeof initialState  
+
+const dialogsReducer = (state = initialState, action:any):InitialStateType => {
   switch (action.type) {
     case ADD_NEW_MESSAGE: {
       return {
@@ -59,7 +70,12 @@ const dialogsReducer = (state = initialState, action) => {
       return state;
   }
 };
-export const addMessages = (newMessageBody, id) => ({
+type AddMessagesActionType = {
+  type: typeof ADD_NEW_MESSAGE,
+  newMessageBody:string,
+  id:number
+}
+export const addMessages = (newMessageBody:string, id:number):AddMessagesActionType => ({
   type: ADD_NEW_MESSAGE,
   newMessageBody,
   id,
